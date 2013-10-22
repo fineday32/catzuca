@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E088462B1816800D005C0878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462A1816800D005C0878 /* Foundation.framework */; };
+		E088462D1816800D005C0878 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462C1816800D005C0878 /* CoreGraphics.framework */; };
+		E088462F1816800D005C0878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462E1816800D005C0878 /* UIKit.framework */; };
+		E08846351816800D005C0878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E08846331816800D005C0878 /* InfoPlist.strings */; };
+		E08846371816800D005C0878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E08846361816800D005C0878 /* main.m */; };
+		E088463B1816800D005C0878 /* catzucaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E088463A1816800D005C0878 /* catzucaAppDelegate.m */; };
+		E088463E1816800D005C0878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E088463C1816800D005C0878 /* Main.storyboard */; };
+		E08846411816800D005C0878 /* catzucaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08846401816800D005C0878 /* catzucaViewController.m */; };
+		E08846431816800D005C0878 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E08846421816800D005C0878 /* Images.xcassets */; };
+		E088464A1816800E005C0878 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08846491816800E005C0878 /* XCTest.framework */; };
+		E088464B1816800E005C0878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462A1816800D005C0878 /* Foundation.framework */; };
+		E088464C1816800E005C0878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462E1816800D005C0878 /* UIKit.framework */; };
+		E08846541816800E005C0878 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E08846521816800E005C0878 /* InfoPlist.strings */; };
+		E08846561816800E005C0878 /* catzucaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E08846551816800E005C0878 /* catzucaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E088464D1816800E005C0878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E088461F1816800D005C0878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E08846261816800D005C0878;
+			remoteInfo = catzuca;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E08846271816800D005C0878 /* catzuca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catzuca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E088462A1816800D005C0878 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E088462C1816800D005C0878 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E088462E1816800D005C0878 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E08846321816800D005C0878 /* catzuca-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "catzuca-Info.plist"; sourceTree = "<group>"; };
+		E08846341816800D005C0878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E08846361816800D005C0878 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E08846381816800D005C0878 /* catzuca-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "catzuca-Prefix.pch"; sourceTree = "<group>"; };
+		E08846391816800D005C0878 /* catzucaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = catzucaAppDelegate.h; sourceTree = "<group>"; };
+		E088463A1816800D005C0878 /* catzucaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catzucaAppDelegate.m; sourceTree = "<group>"; };
+		E088463D1816800D005C0878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E088463F1816800D005C0878 /* catzucaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = catzucaViewController.h; sourceTree = "<group>"; };
+		E08846401816800D005C0878 /* catzucaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catzucaViewController.m; sourceTree = "<group>"; };
+		E08846421816800D005C0878 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E08846481816800E005C0878 /* catzucaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = catzucaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08846491816800E005C0878 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E08846511816800E005C0878 /* catzucaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "catzucaTests-Info.plist"; sourceTree = "<group>"; };
+		E08846531816800E005C0878 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E08846551816800E005C0878 /* catzucaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catzucaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E08846241816800D005C0878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E088462D1816800D005C0878 /* CoreGraphics.framework in Frameworks */,
+				E088462F1816800D005C0878 /* UIKit.framework in Frameworks */,
+				E088462B1816800D005C0878 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E08846451816800E005C0878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E088464A1816800E005C0878 /* XCTest.framework in Frameworks */,
+				E088464C1816800E005C0878 /* UIKit.framework in Frameworks */,
+				E088464B1816800E005C0878 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E088461E1816800D005C0878 = {
+			isa = PBXGroup;
+			children = (
+				E08846301816800D005C0878 /* catzuca */,
+				E088464F1816800E005C0878 /* catzucaTests */,
+				E08846291816800D005C0878 /* Frameworks */,
+				E08846281816800D005C0878 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E08846281816800D005C0878 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E08846271816800D005C0878 /* catzuca.app */,
+				E08846481816800E005C0878 /* catzucaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E08846291816800D005C0878 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E088462A1816800D005C0878 /* Foundation.framework */,
+				E088462C1816800D005C0878 /* CoreGraphics.framework */,
+				E088462E1816800D005C0878 /* UIKit.framework */,
+				E08846491816800E005C0878 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E08846301816800D005C0878 /* catzuca */ = {
+			isa = PBXGroup;
+			children = (
+				E08846391816800D005C0878 /* catzucaAppDelegate.h */,
+				E088463A1816800D005C0878 /* catzucaAppDelegate.m */,
+				E088463C1816800D005C0878 /* Main.storyboard */,
+				E088463F1816800D005C0878 /* catzucaViewController.h */,
+				E08846401816800D005C0878 /* catzucaViewController.m */,
+				E08846421816800D005C0878 /* Images.xcassets */,
+				E08846311816800D005C0878 /* Supporting Files */,
+			);
+			path = catzuca;
+			sourceTree = "<group>";
+		};
+		E08846311816800D005C0878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E08846321816800D005C0878 /* catzuca-Info.plist */,
+				E08846331816800D005C0878 /* InfoPlist.strings */,
+				E08846361816800D005C0878 /* main.m */,
+				E08846381816800D005C0878 /* catzuca-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E088464F1816800E005C0878 /* catzucaTests */ = {
+			isa = PBXGroup;
+			children = (
+				E08846551816800E005C0878 /* catzucaTests.m */,
+				E08846501816800E005C0878 /* Supporting Files */,
+			);
+			path = catzucaTests;
+			sourceTree = "<group>";
+		};
+		E08846501816800E005C0878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E08846511816800E005C0878 /* catzucaTests-Info.plist */,
+				E08846521816800E005C0878 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E08846261816800D005C0878 /* catzuca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E08846591816800E005C0878 /* Build configuration list for PBXNativeTarget "catzuca" */;
+			buildPhases = (
+				E08846231816800D005C0878 /* Sources */,
+				E08846241816800D005C0878 /* Frameworks */,
+				E08846251816800D005C0878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = catzuca;
+			productName = catzuca;
+			productReference = E08846271816800D005C0878 /* catzuca.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E08846471816800E005C0878 /* catzucaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E088465C1816800E005C0878 /* Build configuration list for PBXNativeTarget "catzucaTests" */;
+			buildPhases = (
+				E08846441816800E005C0878 /* Sources */,
+				E08846451816800E005C0878 /* Frameworks */,
+				E08846461816800E005C0878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E088464E1816800E005C0878 /* PBXTargetDependency */,
+			);
+			name = catzucaTests;
+			productName = catzucaTests;
+			productReference = E08846481816800E005C0878 /* catzucaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E088461F1816800D005C0878 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = catzuca;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Thomas Hsu";
+				TargetAttributes = {
+					E08846471816800E005C0878 = {
+						TestTargetID = E08846261816800D005C0878;
+					};
+				};
+			};
+			buildConfigurationList = E08846221816800D005C0878 /* Build configuration list for PBXProject "catzuca" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E088461E1816800D005C0878;
+			productRefGroup = E08846281816800D005C0878 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E08846261816800D005C0878 /* catzuca */,
+				E08846471816800E005C0878 /* catzucaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E08846251816800D005C0878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08846431816800D005C0878 /* Images.xcassets in Resources */,
+				E08846351816800D005C0878 /* InfoPlist.strings in Resources */,
+				E088463E1816800D005C0878 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E08846461816800E005C0878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08846541816800E005C0878 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E08846231816800D005C0878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E088463B1816800D005C0878 /* catzucaAppDelegate.m in Sources */,
+				E08846411816800D005C0878 /* catzucaViewController.m in Sources */,
+				E08846371816800D005C0878 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E08846441816800E005C0878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E08846561816800E005C0878 /* catzucaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E088464E1816800E005C0878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E08846261816800D005C0878 /* catzuca */;
+			targetProxy = E088464D1816800E005C0878 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E08846331816800D005C0878 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E08846341816800D005C0878 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E088463C1816800D005C0878 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E088463D1816800D005C0878 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E08846521816800E005C0878 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E08846531816800E005C0878 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E08846571816800E005C0878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E08846581816800E005C0878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E088465A1816800E005C0878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "catzuca/catzuca-Prefix.pch";
+				INFOPLIST_FILE = "catzuca/catzuca-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E088465B1816800E005C0878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "catzuca/catzuca-Prefix.pch";
+				INFOPLIST_FILE = "catzuca/catzuca-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E088465D1816800E005C0878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/catzuca.app/catzuca";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "catzuca/catzuca-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "catzucaTests/catzucaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E088465E1816800E005C0878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/catzuca.app/catzuca";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "catzuca/catzuca-Prefix.pch";
+				INFOPLIST_FILE = "catzucaTests/catzucaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E08846221816800D005C0878 /* Build configuration list for PBXProject "catzuca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E08846571816800E005C0878 /* Debug */,
+				E08846581816800E005C0878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E08846591816800E005C0878 /* Build configuration list for PBXNativeTarget "catzuca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E088465A1816800E005C0878 /* Debug */,
+				E088465B1816800E005C0878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E088465C1816800E005C0878 /* Build configuration list for PBXNativeTarget "catzucaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E088465D1816800E005C0878 /* Debug */,
+				E088465E1816800E005C0878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E088461F1816800D005C0878 /* Project object */;
+}
