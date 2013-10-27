@@ -46,6 +46,8 @@
     [_upperBarImage setBackgroundColor:[UIColor cyanColor ]];
 //    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:148/255 green:183/255 blue:210/255 alpha:0]];
 
+    
+    [_logoImage setImage:[UIImage imageNamed:@"logo2.jpg"]];
 
 
 }
