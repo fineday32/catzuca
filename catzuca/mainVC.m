@@ -9,11 +9,15 @@
 #import "mainVC.h"
 #import "Constant.h"
 #import "catzucaIO.h"
+#import "KxMenu.h"
+
 @interface mainVC ()
 
 @end
 
-@implementation mainVC
+@implementation mainVC{
+    UIButton *menuButton;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,12 +37,22 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    menuButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    menuButton.frame = CGRectMake(230, 10, 100, 50);
+    [menuButton setTitle:@"MENU" forState:UIControlStateNormal];
+    [menuButton addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:menuButton];
+
+    [_upperBarImage setBackgroundColor:[UIColor cyanColor ]];
+//    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:148/255 green:183/255 blue:210/255 alpha:0]];
     NSLog(@"Hello 1");
     NSDictionary *d = [[NSDictionary alloc] init];
     NSLog(@"init.");
     d = [[catzucaIO sharedData] readPlist];
     NSLog(@"Hello");
     NSLog(@"%@", d);
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -127,6 +141,44 @@
     // Pass the selected object to the new view controller.
 }
 
+
+
+- (void)showMenu:(UIButton *)sender
+{
+    NSArray *menuItems =
+    @[
+      
+      [KxMenuItem menuItem:@"小 小 步 落 客"
+                     image:nil
+                    target:nil
+                    action:NULL],
+      
+      [KxMenuItem menuItem:@"我 的 照 片"
+                     image:[UIImage imageNamed:@"action_icon"]
+                    target:self
+                    action:@selector(pushMenuItem:)],
+      
+      [KxMenuItem menuItem:@"我 的 影 片"
+                     image:[UIImage imageNamed:@"check_icon"]
+                    target:self
+                    action:@selector(pushMenuItem:)],
+      
+
+      ];
+    
+    KxMenuItem *first = menuItems[0];
+    first.foreColor = [UIColor colorWithRed:47/255.0f green:112/255.0f blue:225/255.0f alpha:1.0];
+    first.alignment = NSTextAlignmentCenter;
+    
+    [KxMenu showMenuInView:self.view
+                  fromRect:sender.frame
+                 menuItems:menuItems];
+}
+
+- (void) pushMenuItem:(id)sender
+{
+    NSLog(@"%@", sender);
+}
 
 
 @end
