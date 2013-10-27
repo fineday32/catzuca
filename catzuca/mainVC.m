@@ -8,7 +8,7 @@
 
 #import "mainVC.h"
 #import "Constant.h"
-
+#import "catzucaIO.h"
 @interface mainVC ()
 
 @end
@@ -33,6 +33,12 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSLog(@"Hello 1");
+    NSDictionary *d = [[NSDictionary alloc] init];
+    NSLog(@"init.");
+    d = [[catzucaIO sharedData] readPlist];
+    NSLog(@"Hello");
+    NSLog(@"%@", d);
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,14 +53,14 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 2;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -63,8 +69,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
-    cell.textLabel.text = @"";
+    //cell.textLabel.text = [NSString stringWithFormat:@"%@" ;
     return cell;
 }
 
@@ -112,7 +117,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -122,6 +127,6 @@
     // Pass the selected object to the new view controller.
 }
 
- */
+
 
 @end
