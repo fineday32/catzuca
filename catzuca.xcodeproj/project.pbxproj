@@ -37,6 +37,7 @@
 /* Begin PBXFileReference section */
 		E05F2D23181CAC0D00C547EB /* mainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainVC.h; sourceTree = "<group>"; };
 		E05F2D24181CAC0D00C547EB /* mainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainVC.m; sourceTree = "<group>"; };
+		E05F2D26181CAD4F00C547EB /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		E08846271816800D005C0878 /* catzuca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catzuca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E088462A1816800D005C0878 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E088462C1816800D005C0878 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,9 +121,10 @@
 				E088463C1816800D005C0878 /* Main.storyboard */,
 				E088463F1816800D005C0878 /* catzucaViewController.h */,
 				E08846401816800D005C0878 /* catzucaViewController.m */,
-				E08846421816800D005C0878 /* Images.xcassets */,
 				E05F2D23181CAC0D00C547EB /* mainVC.h */,
 				E05F2D24181CAC0D00C547EB /* mainVC.m */,
+				E05F2D26181CAD4F00C547EB /* Constant.h */,
+				E08846421816800D005C0878 /* Images.xcassets */,
 				E08846311816800D005C0878 /* Supporting Files */,
 			);
 			path = catzuca;

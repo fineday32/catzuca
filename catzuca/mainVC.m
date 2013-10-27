@@ -7,6 +7,7 @@
 //
 
 #import "mainVC.h"
+#import "Constant.h"
 
 @interface mainVC ()
 
@@ -64,6 +65,11 @@
     // Configure the cell...
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return SPECIAL_HEIGHT;
 }
 
 /*
