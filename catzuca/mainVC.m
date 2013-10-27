@@ -8,6 +8,7 @@
 
 #import "mainVC.h"
 #import "Constant.h"
+#import "catzucaIO.h"
 #import "KxMenu.h"
 
 @interface mainVC ()
@@ -45,10 +46,14 @@
 
     [_upperBarImage setBackgroundColor:[UIColor cyanColor ]];
 //    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:148/255 green:183/255 blue:210/255 alpha:0]];
-
-    
     [_logoImage setImage:[UIImage imageNamed:@"logo2.jpg"]];
 
+    NSLog(@"Hello 1");
+    NSDictionary *d = [[NSDictionary alloc] init];
+    NSLog(@"init.");
+    d = [[catzucaIO sharedData] readPlist];
+    NSLog(@"Hello");
+    NSLog(@"%@", d);
 
 }
 
@@ -80,7 +85,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    //cell.textLabel.text = [NSString stringWithFormat:@"%@" ;
     return cell;
 }
 
@@ -128,7 +133,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -138,7 +143,7 @@
     // Pass the selected object to the new view controller.
 }
 
- */
+
 
 - (void)showMenu:(UIButton *)sender
 {
