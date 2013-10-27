@@ -17,7 +17,15 @@
 		BECBE2B8181CB31C006540D4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2B7181CB31C006540D4 /* Security.framework */; };
 		BECBE2BA181CB326006540D4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2B9181CB326006540D4 /* StoreKit.framework */; };
 		BECBE2BC181CB332006540D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2BB181CB332006540D4 /* SystemConfiguration.framework */; };
+		6AC1A0C3181CCB8C000DD05C /* catzucaIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1A0C2181CCB8C000DD05C /* catzucaIO.m */; };
+		6AC1A0CB181D0A95000DD05C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AC1A0C9181D0A95000DD05C /* InfoPlist.strings */; };
+		6AC1A0CD181D0AB2000DD05C /* merged_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC1A0CC181D0AB2000DD05C /* merged_data.plist */; };
+		6AC1A0CF181D1513000DD05C /* merged_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC1A0CE181D1513000DD05C /* merged_data.plist */; };
 		E05F2D25181CAC0D00C547EB /* mainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F2D24181CAC0D00C547EB /* mainVC.m */; };
+		E05F2D8C181CF19600C547EB /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E05F2D8B181CF19600C547EB /* KxMenu.m */; };
+		E05F2D97181CF8BE00C547EB /* image in Resources */ = {isa = PBXBuildFile; fileRef = E05F2D96181CF8BE00C547EB /* image */; };
+		E05F2DA0181D152C00C547EB /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E05F2D9F181D152C00C547EB /* logo.jpg */; };
+		E05F2DA2181D159B00C547EB /* logo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E05F2DA1181D159B00C547EB /* logo2.jpg */; };
 		E088462B1816800D005C0878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462A1816800D005C0878 /* Foundation.framework */; };
 		E088462D1816800D005C0878 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462C1816800D005C0878 /* CoreGraphics.framework */; };
 		E088462F1816800D005C0878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462E1816800D005C0878 /* UIKit.framework */; };
@@ -25,7 +33,6 @@
 		E08846371816800D005C0878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E08846361816800D005C0878 /* main.m */; };
 		E088463B1816800D005C0878 /* catzucaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E088463A1816800D005C0878 /* catzucaAppDelegate.m */; };
 		E088463E1816800D005C0878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E088463C1816800D005C0878 /* Main.storyboard */; };
-		E08846411816800D005C0878 /* catzucaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08846401816800D005C0878 /* catzucaViewController.m */; };
 		E08846431816800D005C0878 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E08846421816800D005C0878 /* Images.xcassets */; };
 		E088464A1816800E005C0878 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08846491816800E005C0878 /* XCTest.framework */; };
 		E088464B1816800E005C0878 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E088462A1816800D005C0878 /* Foundation.framework */; };
@@ -55,9 +62,19 @@
 		BECBE2B7181CB31C006540D4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BECBE2B9181CB326006540D4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BECBE2BB181CB332006540D4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6AC1A0C1181CCB8B000DD05C /* catzucaIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = catzucaIO.h; sourceTree = "<group>"; };
+		6AC1A0C2181CCB8C000DD05C /* catzucaIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = catzucaIO.m; sourceTree = "<group>"; };
+		6AC1A0CA181D0A95000DD05C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		6AC1A0CC181D0AB2000DD05C /* merged_data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = merged_data.plist; sourceTree = "<group>"; };
+		6AC1A0CE181D1513000DD05C /* merged_data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = merged_data.plist; sourceTree = "<group>"; };
 		E05F2D23181CAC0D00C547EB /* mainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainVC.h; sourceTree = "<group>"; };
 		E05F2D24181CAC0D00C547EB /* mainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainVC.m; sourceTree = "<group>"; };
 		E05F2D26181CAD4F00C547EB /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		E05F2D8A181CF18700C547EB /* KxMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		E05F2D8B181CF19600C547EB /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
+		E05F2D96181CF8BE00C547EB /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
+		E05F2D9F181D152C00C547EB /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = image/logo.jpg; sourceTree = "<group>"; };
+		E05F2DA1181D159B00C547EB /* logo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo2.jpg; path = image/logo2.jpg; sourceTree = "<group>"; };
 		E08846271816800D005C0878 /* catzuca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catzuca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E088462A1816800D005C0878 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E088462C1816800D005C0878 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,8 +86,6 @@
 		E08846391816800D005C0878 /* catzucaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = catzucaAppDelegate.h; sourceTree = "<group>"; };
 		E088463A1816800D005C0878 /* catzucaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catzucaAppDelegate.m; sourceTree = "<group>"; };
 		E088463D1816800D005C0878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E088463F1816800D005C0878 /* catzucaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = catzucaViewController.h; sourceTree = "<group>"; };
-		E08846401816800D005C0878 /* catzucaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catzucaViewController.m; sourceTree = "<group>"; };
 		E08846421816800D005C0878 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E08846481816800E005C0878 /* catzucaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = catzucaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E08846491816800E005C0878 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -113,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AC1A0C8181D0A95000DD05C /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				6AC1A0C9181D0A95000DD05C /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		E088461E1816800D005C0878 = {
 			isa = PBXGroup;
 			children = (
@@ -156,16 +179,23 @@
 		E08846301816800D005C0878 /* catzuca */ = {
 			isa = PBXGroup;
 			children = (
+				E05F2D8A181CF18700C547EB /* KxMenu.h */,
+				E05F2D8B181CF19600C547EB /* KxMenu.m */,
 				E08846391816800D005C0878 /* catzucaAppDelegate.h */,
 				E088463A1816800D005C0878 /* catzucaAppDelegate.m */,
+				6AC1A0CC181D0AB2000DD05C /* merged_data.plist */,
+				6AC1A0C8181D0A95000DD05C /* en.lproj */,
 				E088463C1816800D005C0878 /* Main.storyboard */,
-				E088463F1816800D005C0878 /* catzucaViewController.h */,
-				E08846401816800D005C0878 /* catzucaViewController.m */,
 				E05F2D23181CAC0D00C547EB /* mainVC.h */,
 				E05F2D24181CAC0D00C547EB /* mainVC.m */,
 				E05F2D26181CAD4F00C547EB /* Constant.h */,
+				E05F2D9F181D152C00C547EB /* logo.jpg */,
+				E05F2DA1181D159B00C547EB /* logo2.jpg */,
+				E05F2D96181CF8BE00C547EB /* image */,
 				E08846421816800D005C0878 /* Images.xcassets */,
 				E08846311816800D005C0878 /* Supporting Files */,
+				6AC1A0C1181CCB8B000DD05C /* catzucaIO.h */,
+				6AC1A0C2181CCB8C000DD05C /* catzucaIO.m */,
 			);
 			path = catzuca;
 			sourceTree = "<group>";
@@ -173,6 +203,7 @@
 		E08846311816800D005C0878 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6AC1A0CE181D1513000DD05C /* merged_data.plist */,
 				E08846321816800D005C0878 /* catzuca-Info.plist */,
 				E08846331816800D005C0878 /* InfoPlist.strings */,
 				E08846361816800D005C0878 /* main.m */,
@@ -276,7 +307,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC1A0CD181D0AB2000DD05C /* merged_data.plist in Resources */,
+				E05F2D97181CF8BE00C547EB /* image in Resources */,
+				E05F2DA2181D159B00C547EB /* logo2.jpg in Resources */,
+				E05F2DA0181D152C00C547EB /* logo.jpg in Resources */,
 				E08846431816800D005C0878 /* Images.xcassets in Resources */,
+				6AC1A0CB181D0A95000DD05C /* InfoPlist.strings in Resources */,
+				6AC1A0CF181D1513000DD05C /* merged_data.plist in Resources */,
 				E08846351816800D005C0878 /* InfoPlist.strings in Resources */,
 				E088463E1816800D005C0878 /* Main.storyboard in Resources */,
 			);
@@ -298,8 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E088463B1816800D005C0878 /* catzucaAppDelegate.m in Sources */,
+				6AC1A0C3181CCB8C000DD05C /* catzucaIO.m in Sources */,
 				E05F2D25181CAC0D00C547EB /* mainVC.m in Sources */,
-				E08846411816800D005C0878 /* catzucaViewController.m in Sources */,
+				E05F2D8C181CF19600C547EB /* KxMenu.m in Sources */,
 				E08846371816800D005C0878 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +361,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6AC1A0C9181D0A95000DD05C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AC1A0CA181D0A95000DD05C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		E08846331816800D005C0878 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

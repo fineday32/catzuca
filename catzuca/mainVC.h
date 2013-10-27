@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface mainVC : UITableViewController
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *upperBarImage;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 
 @end
