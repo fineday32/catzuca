@@ -25,7 +25,7 @@ static catzucaIO *catzuca = nil;
     return catzuca;
 }
 
-- (NSDictionary *)readPlist
+- (NSArray *)readPlist
 {
     NSLog(@"in the readPlist.");
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"merged_data" ofType:@"plist"];

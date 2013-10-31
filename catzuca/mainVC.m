@@ -10,6 +10,7 @@
 #import "Constant.h"
 #import "catzucaIO.h"
 #import "KxMenu.h"
+#import "detailVC.h"
 
 @interface mainVC ()
 
@@ -17,7 +18,9 @@
 
 @implementation mainVC{
     UIButton *menuButton;
+    NSArray *data;
 }
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -46,14 +49,13 @@
 
     [_upperBarImage setBackgroundColor:[UIColor cyanColor ]];
 //    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:148/255 green:183/255 blue:210/255 alpha:0]];
-    NSLog(@"Hello 1");
-    NSDictionary *d = [[NSDictionary alloc] init];
-    NSLog(@"init.");
-    d = [[catzucaIO sharedData] readPlist];
-    NSLog(@"Hello");
-    NSLog(@"%@", d);
-
+    self->data = [[NSArray alloc] init];
+    self->data = [[catzucaIO sharedData] readPlist];
+//    for (id element in self->data) {
+//        NSLog(@"%@", [element objectForKey:@"name"]);
+//    }
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -67,23 +69,31 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    NSLog(@"%ld", self->data.count);
+    return self->data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     //cell.textLabel.text = [NSString stringWithFormat:@"%@" ;
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+//    NSLog(@"row:%@",[self->data objectAtIndex:indexPath.row]);
+    
+    cell.textLabel.text = [self->data[indexPath.row] objectForKey:@"name"];
+    
     return cell;
 }
 
@@ -137,6 +147,20 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
+    if ([segue.identifier isEqualToString:@"ShowSpotDetail"]) {
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        NSDictionary *spot = [self->data objectAtIndex:indexPath.row];
+        
+        detailVC *detailViewController = segue.destinationViewController; //segue 連線（起點到終點）
+        detailViewController.spot = spot;
+        
+
+        
+        //[self.storyboard instantiateViewControllerWithIdentifier:@"detailVC"];
+        
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }

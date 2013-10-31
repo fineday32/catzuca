@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface catzucaIO : NSObject{
-    NSDictionary * originData;
+    NSArray * originData;
 }
 + (catzucaIO *)sharedData;
-- (NSDictionary *)readPlist;
+- (NSArray *)readPlist;
 @end

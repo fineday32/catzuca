@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define SPECIAL_HEIGHT 5
+#define SPECIAL_HEIGHT 30
 
 @protocol Constant <NSObject>
 
