@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define SPECIAL_HEIGHT 5
+#define SPECIAL_HEIGHT 30
+
+#define MAX_VEDIO_SELECT_NUM 5
 
 @protocol Constant <NSObject>
 
