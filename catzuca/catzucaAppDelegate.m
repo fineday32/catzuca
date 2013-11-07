@@ -5,14 +5,17 @@
 //  Created by Thomas on 13/10/22.
 //  Copyright (c) 2013年 Thomas Hsu. All rights reserved.
 //
-
+#import <Parse/Parse.h>
 #import "catzucaAppDelegate.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @implementation catzucaAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"2OMcaBiI4kFBj9pSjQrYb2TGQW8vFOC1VKv41JK3"
+                  clientKey:@"AETkYSf5jkSF3xo816qi4HgSyEWtIpOyTB6EnnO1"];
     return YES;
 }
 							
@@ -36,6 +39,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
