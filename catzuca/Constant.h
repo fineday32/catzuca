@@ -10,7 +10,7 @@
 
 #define SPECIAL_HEIGHT 30
 
-#define MAX_VEDIO_SELECT_NUM 5
+#define MAX_VEDIO_SELECT_NUM 6
 
 @protocol Constant <NSObject>
 
