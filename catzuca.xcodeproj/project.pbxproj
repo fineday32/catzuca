@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6A8E399A182F2B3B00E7CE40 /* classVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E3999182F2B3B00E7CE40 /* classVC.m */; };
 		6A8E399D182F2D8900E7CE40 /* itemsInClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E399C182F2D8900E7CE40 /* itemsInClassVC.m */; };
+		6A8E39A3182F675D00E7CE40 /* fadeInSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E39A2182F675D00E7CE40 /* fadeInSegue.m */; };
+		6A8E39A9182F7E2A00E7CE40 /* searchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E39A8182F7E2A00E7CE40 /* searchVC.m */; };
 		6AC1A0C3181CCB8C000DD05C /* catzucaIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1A0C2181CCB8C000DD05C /* catzucaIO.m */; };
 		6AC1A0CB181D0A95000DD05C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AC1A0C9181D0A95000DD05C /* InfoPlist.strings */; };
 		6AC1A0CF181D1513000DD05C /* merged_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC1A0CE181D1513000DD05C /* merged_data.plist */; };
@@ -17,7 +19,6 @@
 		BE1AD403182F2CC1007CFAEE /* stack_of_photos-32.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1AD402182F2CC1007CFAEE /* stack_of_photos-32.png */; };
 		BE1AD405182F2CD4007CFAEE /* movie-32.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1AD404182F2CD4007CFAEE /* movie-32.png */; };
 		BE1AD407182F2D5F007CFAEE /* search-32.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1AD406182F2D5F007CFAEE /* search-32.png */; };
-		BECBE2AA181CB228006540D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2A9181CB228006540D4 /* Parse.framework */; };
 		BECBE2AC181CB2AF006540D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2AB181CB2AF006540D4 /* AudioToolbox.framework */; };
 		BECBE2AE181CB2BF006540D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2AD181CB2BF006540D4 /* CFNetwork.framework */; };
 		BECBE2B0181CB2E2006540D4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2AF181CB2E2006540D4 /* CoreLocation.framework */; };
@@ -64,6 +65,10 @@
 		6A8E3999182F2B3B00E7CE40 /* classVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = classVC.m; sourceTree = "<group>"; };
 		6A8E399B182F2D8900E7CE40 /* itemsInClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemsInClassVC.h; sourceTree = "<group>"; };
 		6A8E399C182F2D8900E7CE40 /* itemsInClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemsInClassVC.m; sourceTree = "<group>"; };
+		6A8E39A1182F675D00E7CE40 /* fadeInSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fadeInSegue.h; sourceTree = "<group>"; };
+		6A8E39A2182F675D00E7CE40 /* fadeInSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fadeInSegue.m; sourceTree = "<group>"; };
+		6A8E39A7182F7E2A00E7CE40 /* searchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchVC.h; sourceTree = "<group>"; };
+		6A8E39A8182F7E2A00E7CE40 /* searchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchVC.m; sourceTree = "<group>"; };
 		6AC1A0C1181CCB8B000DD05C /* catzucaIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = catzucaIO.h; sourceTree = "<group>"; };
 		6AC1A0C2181CCB8C000DD05C /* catzucaIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = catzucaIO.m; sourceTree = "<group>"; };
 		6AC1A0CA181D0A95000DD05C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -233,6 +238,10 @@
 				6A8E3999182F2B3B00E7CE40 /* classVC.m */,
 				6A8E399B182F2D8900E7CE40 /* itemsInClassVC.h */,
 				6A8E399C182F2D8900E7CE40 /* itemsInClassVC.m */,
+				6A8E39A1182F675D00E7CE40 /* fadeInSegue.h */,
+				6A8E39A2182F675D00E7CE40 /* fadeInSegue.m */,
+				6A8E39A7182F7E2A00E7CE40 /* searchVC.h */,
+				6A8E39A8182F7E2A00E7CE40 /* searchVC.m */,
 			);
 			path = catzuca;
 			sourceTree = "<group>";
@@ -380,6 +389,8 @@
 				E088463B1816800D005C0878 /* catzucaAppDelegate.m in Sources */,
 				6AC1A0C3181CCB8C000DD05C /* catzucaIO.m in Sources */,
 				E05F2D25181CAC0D00C547EB /* mainVC.m in Sources */,
+				6A8E39A9182F7E2A00E7CE40 /* searchVC.m in Sources */,
+				6A8E39A3182F675D00E7CE40 /* fadeInSegue.m in Sources */,
 				E05F2D8C181CF19600C547EB /* KxMenu.m in Sources */,
 				E02C65301828E74A0039A375 /* CTAssetsPickerController.m in Sources */,
 				E08846371816800D005C0878 /* main.m in Sources */,
