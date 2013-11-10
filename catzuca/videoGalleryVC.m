@@ -27,7 +27,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewWillAppear:NO];
 	// Do any additional setup after loading the view.
     //for Image(Video) Pick
     if (self.asset==nil)

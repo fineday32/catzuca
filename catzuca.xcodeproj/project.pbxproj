@@ -26,7 +26,6 @@
 		BECBE2B8181CB31C006540D4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2B7181CB31C006540D4 /* Security.framework */; };
 		BECBE2BA181CB326006540D4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2B9181CB326006540D4 /* StoreKit.framework */; };
 		BECBE2BC181CB332006540D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2BB181CB332006540D4 /* SystemConfiguration.framework */; };
-		E004560E182F6BFE001EE789 /* testPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E004560D182F6BFE001EE789 /* testPageVC.m */; };
 		E0045614182F6EE4001EE789 /* photoGalleryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0045613182F6EE4001EE789 /* photoGalleryVC.m */; };
 		E0045617182F6F3C001EE789 /* NSData+NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0045616182F6F3C001EE789 /* NSData+NSDataAdditions.m */; };
 		E0045619182F6F69001EE789 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0045618182F6F69001EE789 /* FacebookSDK.framework */; };
@@ -89,8 +88,6 @@
 		BECBE2B7181CB31C006540D4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BECBE2B9181CB326006540D4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BECBE2BB181CB332006540D4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		E004560C182F6BFE001EE789 /* testPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testPageVC.h; sourceTree = "<group>"; };
-		E004560D182F6BFE001EE789 /* testPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testPageVC.m; sourceTree = "<group>"; };
 		E0045612182F6EE4001EE789 /* photoGalleryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = photoGalleryVC.h; sourceTree = "<group>"; };
 		E0045613182F6EE4001EE789 /* photoGalleryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = photoGalleryVC.m; sourceTree = "<group>"; };
 		E0045615182F6F3C001EE789 /* NSData+NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NSDataAdditions.h"; sourceTree = "<group>"; };
@@ -254,8 +251,6 @@
 				E08846311816800D005C0878 /* Supporting Files */,
 				6A8E3998182F2B3B00E7CE40 /* classVC.h */,
 				6A8E3999182F2B3B00E7CE40 /* classVC.m */,
-				E004560C182F6BFE001EE789 /* testPageVC.h */,
-				E004560D182F6BFE001EE789 /* testPageVC.m */,
 				6A8E399B182F2D8900E7CE40 /* itemsInClassVC.h */,
 				6A8E399C182F2D8900E7CE40 /* itemsInClassVC.m */,
 				E004561A182F70FC001EE789 /* FBShare.png */,
@@ -416,7 +411,6 @@
 				E02C65321828E74A0039A375 /* NSDate+TimeInterval.m in Sources */,
 				E004561E182F72E4001EE789 /* videoGalleryVC.m in Sources */,
 				6AC1A0D5181D389B000DD05C /* detailVC.m in Sources */,
-				E004560E182F6BFE001EE789 /* testPageVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
