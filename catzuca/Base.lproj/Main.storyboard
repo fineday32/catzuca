@@ -94,11 +94,11 @@
             </objects>
             <point key="canvasLocation" x="1163" y="1057"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - photo-->
         <scene sceneID="RxB-yZ-Wqo">
             <objects>
                 <navigationController definesPresentationContext="YES" id="4jh-7o-y5h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="jTd-VK-REe"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="photo" image="stack_of_photos-32.png" id="jTd-VK-REe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="77O-Uf-rqb">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -135,11 +135,11 @@
             </objects>
             <point key="canvasLocation" x="1163" y="1750"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - film-->
         <scene sceneID="gqE-SA-Lwj">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Uql-B8-4nk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="VSI-aO-yEl"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="film" image="movie-32.png" id="VSI-aO-yEl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WDw-fA-NkU">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -176,11 +176,11 @@
             </objects>
             <point key="canvasLocation" x="1156" y="2447"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - search-->
         <scene sceneID="0Go-sa-MsU">
             <objects>
                 <navigationController definesPresentationContext="YES" id="bgG-aM-AUy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="x96-Ic-uml"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="search" image="search-32.png" id="x96-Ic-uml"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="He3-i3-DqY">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -229,11 +229,11 @@
             </objects>
             <point key="canvasLocation" x="1465" y="1847"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - list-->
         <scene sceneID="I5P-1m-YZQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2yr-Ir-9MJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="7if-xX-lvq"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="list" image="shoes-32.png" id="7if-xX-lvq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BUV-Da-OpU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -270,6 +270,12 @@
             <point key="canvasLocation" x="96" y="336"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="movie-32.png" width="32" height="32"/>
+        <image name="search-32.png" width="32" height="32"/>
+        <image name="shoes-32.png" width="32" height="32"/>
+        <image name="stack_of_photos-32.png" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

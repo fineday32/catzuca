@@ -17,25 +17,6 @@
     [Parse setApplicationId:@"2OMcaBiI4kFBj9pSjQrYb2TGQW8vFOC1VKv41JK3"
                   clientKey:@"AETkYSf5jkSF3xo816qi4HgSyEWtIpOyTB6EnnO1"];
     
-    
-//    UITabBar *myTabBar = [[UITabBar alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-//    myTabBar.delegate=self;   //here you need import the protocol <UITabBarDelegate>
-//    [self.view addSubview:myTabBar];
-//    NSMutableArray *tabBarItems = [[NSMutableArray alloc] init];
-//    // Assign tab bar item with titles
-//    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-//    UITabBar *tabBar = tabBarController.tabBar;
-//    UITabBarItem *tabBarItem1 = [[UITabBarItem alloc] initWithTitle:@"list" image:[UIImage imageNamed:@"shoes-50.png"] tag:0];
-//    UITabBarItem *tabBarItem2 = [[UITabBarItem alloc] initWithTitle:@"pictures" image:[UIImage imageNamed:@"stack_of_photos-50.png"] tag:1];
-//    UITabBarItem *tabBarItem3 = [[UITabBarItem alloc] initWithTitle:@"films" image:[UIImage imageNamed:@"movie-50.png"] tag:2];
-////    UITabBarItem *tabBarItem4 = [[UITabBarItem alloc] initWithTitle:@"films" image:[UIImage imageNamed:@"movie-50.png"] tag:3];
-//    [tabBarItems addObject:tabBarItem1];
-//    [tabBarItems addObject:tabBarItem2];
-//    [tabBarItems addObject:tabBarItem3];
-//    
-//    myTabBar.items = tabBarItems;
-//    myTabBar.selectedItem = [tabBarItems objectAtIndex:0];
-    
     return YES;
 }
 							
