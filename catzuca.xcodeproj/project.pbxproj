@@ -28,6 +28,11 @@
 		BECBE2B8181CB31C006540D4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2B7181CB31C006540D4 /* Security.framework */; };
 		BECBE2BA181CB326006540D4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2B9181CB326006540D4 /* StoreKit.framework */; };
 		BECBE2BC181CB332006540D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2BB181CB332006540D4 /* SystemConfiguration.framework */; };
+		E0045614182F6EE4001EE789 /* photoGalleryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0045613182F6EE4001EE789 /* photoGalleryVC.m */; };
+		E0045617182F6F3C001EE789 /* NSData+NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0045616182F6F3C001EE789 /* NSData+NSDataAdditions.m */; };
+		E0045619182F6F69001EE789 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0045618182F6F69001EE789 /* FacebookSDK.framework */; };
+		E004561B182F70FC001EE789 /* FBShare.png in Resources */ = {isa = PBXBuildFile; fileRef = E004561A182F70FC001EE789 /* FBShare.png */; };
+		E004561E182F72E4001EE789 /* videoGalleryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E004561D182F72E4001EE789 /* videoGalleryVC.m */; };
 		E02C65301828E74A0039A375 /* CTAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C652C1828E74A0039A375 /* CTAssetsPickerController.m */; };
 		E02C65311828E74A0039A375 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02C652D1828E74A0039A375 /* Images.xcassets */; };
 		E02C65321828E74A0039A375 /* NSDate+TimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = E02C652F1828E74A0039A375 /* NSDate+TimeInterval.m */; };
@@ -89,6 +94,14 @@
 		BECBE2B7181CB31C006540D4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BECBE2B9181CB326006540D4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BECBE2BB181CB332006540D4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E0045612182F6EE4001EE789 /* photoGalleryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = photoGalleryVC.h; sourceTree = "<group>"; };
+		E0045613182F6EE4001EE789 /* photoGalleryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = photoGalleryVC.m; sourceTree = "<group>"; };
+		E0045615182F6F3C001EE789 /* NSData+NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NSDataAdditions.h"; sourceTree = "<group>"; };
+		E0045616182F6F3C001EE789 /* NSData+NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NSDataAdditions.m"; sourceTree = "<group>"; };
+		E0045618182F6F69001EE789 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		E004561A182F70FC001EE789 /* FBShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBShare.png; sourceTree = "<group>"; };
+		E004561C182F72E4001EE789 /* videoGalleryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoGalleryVC.h; sourceTree = "<group>"; };
+		E004561D182F72E4001EE789 /* videoGalleryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoGalleryVC.m; sourceTree = "<group>"; };
 		E02C652B1828E74A0039A375 /* CTAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAssetsPickerController.h; sourceTree = "<group>"; };
 		E02C652C1828E74A0039A375 /* CTAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAssetsPickerController.m; sourceTree = "<group>"; };
 		E02C652D1828E74A0039A375 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -137,6 +150,7 @@
 				E088462D1816800D005C0878 /* CoreGraphics.framework in Frameworks */,
 				E088462F1816800D005C0878 /* UIKit.framework in Frameworks */,
 				E088462B1816800D005C0878 /* Foundation.framework in Frameworks */,
+				E0045619182F6F69001EE789 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +209,7 @@
 		E08846291816800D005C0878 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0045618182F6F69001EE789 /* FacebookSDK.framework */,
 				6A8E3993182F263000E7CE40 /* Parse */,
 				E0D7BDB41828E89A00A551E8 /* Parse.framework */,
 				BECBE2BB181CB332006540D4 /* SystemConfiguration.framework */,
@@ -221,6 +236,8 @@
 				E02C652A1828E74A0039A375 /* CTAssetsPickerController */,
 				E05F2D8A181CF18700C547EB /* KxMenu.h */,
 				E05F2D8B181CF19600C547EB /* KxMenu.m */,
+				E0045615182F6F3C001EE789 /* NSData+NSDataAdditions.h */,
+				E0045616182F6F3C001EE789 /* NSData+NSDataAdditions.m */,
 				E08846391816800D005C0878 /* catzucaAppDelegate.h */,
 				E088463A1816800D005C0878 /* catzucaAppDelegate.m */,
 				6AC1A0C1181CCB8B000DD05C /* catzucaIO.h */,
@@ -231,6 +248,10 @@
 				E05F2D24181CAC0D00C547EB /* mainVC.m */,
 				6AC1A0D3181D389B000DD05C /* detailVC.h */,
 				6AC1A0D4181D389B000DD05C /* detailVC.m */,
+				E0045612182F6EE4001EE789 /* photoGalleryVC.h */,
+				E0045613182F6EE4001EE789 /* photoGalleryVC.m */,
+				E004561C182F72E4001EE789 /* videoGalleryVC.h */,
+				E004561D182F72E4001EE789 /* videoGalleryVC.m */,
 				E05F2D26181CAD4F00C547EB /* Constant.h */,
 				E08846421816800D005C0878 /* Images.xcassets */,
 				E08846311816800D005C0878 /* Supporting Files */,
@@ -242,6 +263,7 @@
 				6A8E39A2182F675D00E7CE40 /* fadeInSegue.m */,
 				6A8E39A7182F7E2A00E7CE40 /* searchVC.h */,
 				6A8E39A8182F7E2A00E7CE40 /* searchVC.m */,
+				E004561A182F70FC001EE789 /* FBShare.png */,
 			);
 			path = catzuca;
 			sourceTree = "<group>";
@@ -361,6 +383,7 @@
 				E02C65311828E74A0039A375 /* Images.xcassets in Resources */,
 				BE1AD407182F2D5F007CFAEE /* search-32.png in Resources */,
 				BE1AD401182F2C68007CFAEE /* shoes-32.png in Resources */,
+				E004561B182F70FC001EE789 /* FBShare.png in Resources */,
 				E08846431816800D005C0878 /* Images.xcassets in Resources */,
 				6AC1A0CB181D0A95000DD05C /* InfoPlist.strings in Resources */,
 				BE1AD403182F2CC1007CFAEE /* stack_of_photos-32.png in Resources */,
@@ -387,15 +410,18 @@
 			files = (
 				6A8E399A182F2B3B00E7CE40 /* classVC.m in Sources */,
 				E088463B1816800D005C0878 /* catzucaAppDelegate.m in Sources */,
+				E0045614182F6EE4001EE789 /* photoGalleryVC.m in Sources */,
 				6AC1A0C3181CCB8C000DD05C /* catzucaIO.m in Sources */,
 				E05F2D25181CAC0D00C547EB /* mainVC.m in Sources */,
 				6A8E39A9182F7E2A00E7CE40 /* searchVC.m in Sources */,
 				6A8E39A3182F675D00E7CE40 /* fadeInSegue.m in Sources */,
 				E05F2D8C181CF19600C547EB /* KxMenu.m in Sources */,
+				E0045617182F6F3C001EE789 /* NSData+NSDataAdditions.m in Sources */,
 				E02C65301828E74A0039A375 /* CTAssetsPickerController.m in Sources */,
 				E08846371816800D005C0878 /* main.m in Sources */,
 				6A8E399D182F2D8900E7CE40 /* itemsInClassVC.m in Sources */,
 				E02C65321828E74A0039A375 /* NSDate+TimeInterval.m in Sources */,
+				E004561E182F72E4001EE789 /* videoGalleryVC.m in Sources */,
 				6AC1A0D5181D389B000DD05C /* detailVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +563,7 @@
 					"/Users/mhci/Desktop/temp\\ iOS\\ project/catzuca",
 					"/Users/mhci/Desktop/catzuca\\ (YuTing)",
 					/Users/cytms/Projects/ios,
+					/Users/mhci/Desktop/catzuca,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "catzuca/catzuca-Prefix.pch";
@@ -561,6 +588,7 @@
 					"/Users/mhci/Desktop/temp\\ iOS\\ project/catzuca",
 					"/Users/mhci/Desktop/catzuca\\ (YuTing)",
 					/Users/cytms/Projects/ios,
+					/Users/mhci/Desktop/catzuca,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "catzuca/catzuca-Prefix.pch";
