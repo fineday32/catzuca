@@ -56,13 +56,6 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 //    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:154/255.0f green:189/255.0f blue:212/255.0f alpha:1.0]];
 //    [_logoImage setImage:[UIImage imageNamed:@"logo2.jpg"]];
 
-    NSLog(@"Hello 1");
-    NSDictionary *d = [[NSDictionary alloc] init];
-    NSLog(@"init.");
-    d = [[catzucaIO sharedData] readPlist];
-    NSLog(@"Hello");
-    NSLog(@"%@", d);
-
 
     self->data = [[NSArray alloc] init];
     self->data = [[catzucaIO sharedData] readPlist];
@@ -92,16 +85,16 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    NSLog(@"%ld", self->data.count);
+
     return self->data.count;
 }
 

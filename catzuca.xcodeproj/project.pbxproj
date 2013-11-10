@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A8E399A182F2B3B00E7CE40 /* classVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E3999182F2B3B00E7CE40 /* classVC.m */; };
+		6A8E399D182F2D8900E7CE40 /* itemsInClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E399C182F2D8900E7CE40 /* itemsInClassVC.m */; };
 		6AC1A0C3181CCB8C000DD05C /* catzucaIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1A0C2181CCB8C000DD05C /* catzucaIO.m */; };
 		6AC1A0CB181D0A95000DD05C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AC1A0C9181D0A95000DD05C /* InfoPlist.strings */; };
 		6AC1A0CF181D1513000DD05C /* merged_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC1A0CE181D1513000DD05C /* merged_data.plist */; };
@@ -14,7 +16,6 @@
 		BE1AD3EF182E6FD8007CFAEE /* stack_of_photos-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1AD3EE182E6FD8007CFAEE /* stack_of_photos-50.png */; };
 		BE1AD3F1182E6FEC007CFAEE /* movie-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1AD3F0182E6FEC007CFAEE /* movie-50.png */; };
 		BE1AD3F3182E7065007CFAEE /* shoes-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1AD3F2182E7065007CFAEE /* shoes-50.png */; };
-		BECBE2AA181CB228006540D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2A9181CB228006540D4 /* Parse.framework */; };
 		BECBE2AC181CB2AF006540D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2AB181CB2AF006540D4 /* AudioToolbox.framework */; };
 		BECBE2AE181CB2BF006540D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2AD181CB2BF006540D4 /* CFNetwork.framework */; };
 		BECBE2B0181CB2E2006540D4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECBE2AF181CB2E2006540D4 /* CoreLocation.framework */; };
@@ -56,6 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A8E3993182F263000E7CE40 /* Parse */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = Parse; path = Parse.framework/Parse; sourceTree = "<group>"; };
+		6A8E3998182F2B3B00E7CE40 /* classVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classVC.h; sourceTree = "<group>"; };
+		6A8E3999182F2B3B00E7CE40 /* classVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = classVC.m; sourceTree = "<group>"; };
+		6A8E399B182F2D8900E7CE40 /* itemsInClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemsInClassVC.h; sourceTree = "<group>"; };
+		6A8E399C182F2D8900E7CE40 /* itemsInClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemsInClassVC.m; sourceTree = "<group>"; };
 		6AC1A0C1181CCB8B000DD05C /* catzucaIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = catzucaIO.h; sourceTree = "<group>"; };
 		6AC1A0C2181CCB8C000DD05C /* catzucaIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = catzucaIO.m; sourceTree = "<group>"; };
 		6AC1A0CA181D0A95000DD05C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -110,11 +116,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D7BDB51828E89A00A551E8 /* Parse.framework in Frameworks */,
 				BECBE2BC181CB332006540D4 /* SystemConfiguration.framework in Frameworks */,
 				BECBE2BA181CB326006540D4 /* StoreKit.framework in Frameworks */,
 				BECBE2B8181CB31C006540D4 /* Security.framework in Frameworks */,
 				BECBE2B6181CB311006540D4 /* QuartzCore.framework in Frameworks */,
-				E0D7BDB51828E89A00A551E8 /* Parse.framework in Frameworks */,
 				BECBE2B4181CB302006540D4 /* MobileCoreServices.framework in Frameworks */,
 				BECBE2B2181CB2F2006540D4 /* libz.1.1.3.dylib in Frameworks */,
 				BECBE2B0181CB2E2006540D4 /* CoreLocation.framework in Frameworks */,
@@ -122,7 +128,6 @@
 				BECBE2AC181CB2AF006540D4 /* AudioToolbox.framework in Frameworks */,
 				E088462D1816800D005C0878 /* CoreGraphics.framework in Frameworks */,
 				E088462F1816800D005C0878 /* UIKit.framework in Frameworks */,
-				BECBE2AA181CB228006540D4 /* Parse.framework in Frameworks */,
 				E088462B1816800D005C0878 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +187,7 @@
 		E08846291816800D005C0878 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A8E3993182F263000E7CE40 /* Parse */,
 				E0D7BDB41828E89A00A551E8 /* Parse.framework */,
 				BECBE2BB181CB332006540D4 /* SystemConfiguration.framework */,
 				BECBE2B9181CB326006540D4 /* StoreKit.framework */,
@@ -220,6 +226,10 @@
 				E05F2D26181CAD4F00C547EB /* Constant.h */,
 				E08846421816800D005C0878 /* Images.xcassets */,
 				E08846311816800D005C0878 /* Supporting Files */,
+				6A8E3998182F2B3B00E7CE40 /* classVC.h */,
+				6A8E3999182F2B3B00E7CE40 /* classVC.m */,
+				6A8E399B182F2D8900E7CE40 /* itemsInClassVC.h */,
+				6A8E399C182F2D8900E7CE40 /* itemsInClassVC.m */,
 			);
 			path = catzuca;
 			sourceTree = "<group>";
@@ -361,12 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A8E399A182F2B3B00E7CE40 /* classVC.m in Sources */,
 				E088463B1816800D005C0878 /* catzucaAppDelegate.m in Sources */,
 				6AC1A0C3181CCB8C000DD05C /* catzucaIO.m in Sources */,
 				E05F2D25181CAC0D00C547EB /* mainVC.m in Sources */,
 				E05F2D8C181CF19600C547EB /* KxMenu.m in Sources */,
 				E02C65301828E74A0039A375 /* CTAssetsPickerController.m in Sources */,
 				E08846371816800D005C0878 /* main.m in Sources */,
+				6A8E399D182F2D8900E7CE40 /* itemsInClassVC.m in Sources */,
 				E02C65321828E74A0039A375 /* NSDate+TimeInterval.m in Sources */,
 				6AC1A0D5181D389B000DD05C /* detailVC.m in Sources */,
 			);
@@ -508,10 +520,15 @@
 					/Users/chuya/Desktop/webs/catzuca/catzuca,
 					"/Users/mhci/Desktop/temp\\ iOS\\ project/catzuca",
 					"/Users/mhci/Desktop/catzuca\\ (YuTing)",
+					/Users/cytms/Projects/ios,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "catzuca/catzuca-Prefix.pch";
 				INFOPLIST_FILE = "catzuca/catzuca-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cytms/Projects/ios/Parse.framework,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -527,10 +544,15 @@
 					/Users/chuya/Desktop/webs/catzuca/catzuca,
 					"/Users/mhci/Desktop/temp\\ iOS\\ project/catzuca",
 					"/Users/mhci/Desktop/catzuca\\ (YuTing)",
+					/Users/cytms/Projects/ios,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "catzuca/catzuca-Prefix.pch";
 				INFOPLIST_FILE = "catzuca/catzuca-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/cytms/Projects/ios/Parse.framework,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
