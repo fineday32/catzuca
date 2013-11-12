@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface catzucaAppDelegate : UIResponder <UIApplicationDelegate>
+@interface catzucaAppDelegate : UIResponder <UIApplicationDelegate>{
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

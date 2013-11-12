@@ -11,6 +11,7 @@
 #import "catzucaIO.h"
 #import "KxMenu.h"
 #import "detailVC.h"
+#import <Parse/Parse.h>
 
 
 #import <MobileCoreServices/MobileCoreServices.h>
@@ -37,6 +38,11 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [locationManager startUpdatingLocation];
     }
     return self;
 }
@@ -55,10 +61,11 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 //    [_upperBarImage setBackgroundColor:[UIColor cyanColor]];
 //    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:154/255.0f green:189/255.0f blue:212/255.0f alpha:1.0]];
 //    [_logoImage setImage:[UIImage imageNamed:@"logo2.jpg"]];
-
-
-    self->data = [[NSArray alloc] init];
-    self->data = [[catzucaIO sharedData] readPlist];
+    
+    self->data = [[catzucaIO sharedData] getListOfData: locationManager.location and:@"all"];
+    
+//    self->data = [[NSArray alloc] init];
+//    self->data = [[catzucaIO sharedData] readPlist];
 //    for (id element in self->data) {
 //        NSLog(@"%@", [element objectForKey:@"name"]);
 //    }
@@ -92,9 +99,6 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    // Return the number of rows in the section.
-
     return self->data.count;
 }
 
@@ -111,6 +115,7 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 //    NSLog(@"row:%@",[self->data objectAtIndex:indexPath.row]);
     
     cell.textLabel.text = [self->data[indexPath.row] objectForKey:@"name"];
+//    cell.textLabel.text = [@([[self->data[indexPath.row] objectForKey:@"GeoPoint"] distanceInMilesTo:locationManager.location]) stringValue];
     
     return cell;
 }
@@ -130,7 +135,7 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
     if ([segue.identifier isEqualToString:@"ShowSpotDetail"]) {
         UITableViewCell *cell = (UITableViewCell *)sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        NSDictionary *spot = [self->data objectAtIndex:indexPath.row];
+        PFObject *spot = [self->data objectAtIndex:indexPath.row];
         
         detailVC *detailViewController = segue.destinationViewController; //segue 連線（起點到終點）
         detailViewController.spot = spot;
@@ -144,6 +149,8 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+
+
 
 
 ///////////////////////////////////////////////////////////////

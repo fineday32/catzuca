@@ -59,7 +59,6 @@
     _directoryContents =  [[NSFileManager defaultManager]
                            contentsOfDirectoryAtPath:_documentsDirectory error:&error];
     
-    NSLog(@"directoryContents ====== %@",_directoryContents);
     _count = 0;
     _allCellCount=0;
     

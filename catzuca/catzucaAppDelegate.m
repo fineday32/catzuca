@@ -14,8 +14,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [Parse setApplicationId:@"2OMcaBiI4kFBj9pSjQrYb2TGQW8vFOC1VKv41JK3"
-                  clientKey:@"AETkYSf5jkSF3xo816qi4HgSyEWtIpOyTB6EnnO1"];
+//    [Parse setApplicationId:@"2OMcaBiI4kFBj9pSjQrYb2TGQW8vFOC1VKv41JK3"
+//                  clientKey:@"AETkYSf5jkSF3xo816qi4HgSyEWtIpOyTB6EnnO1"];
+//    
+//    PFObject *testObject = [PFObject objectWithClassName:@"OpenData"];
+//    PFQuery *query = [PFQuery queryWithClassName:@"OpenData"];
+//    [query whereKey:@"alsoknownas" equalTo:@"原舞者"];
+//    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+//        if (!object) {
+//            NSLog(@"The getFirstObject request failed.");
+//        } else {
+//            // The find succeeded.
+//            NSLog(@"Successfully retrieved the object.");
+//        }
+//    }];
+//    NSLog(@"___________");
     
     return YES;
 }

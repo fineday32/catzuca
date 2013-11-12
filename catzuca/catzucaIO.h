@@ -15,6 +15,7 @@
 @class AVPlayer;
 typedef void (^ALAssetsLibraryAssetForURLResultBlock)(ALAsset *asset);
 typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
+#import <Parse/Parse.h>
 
 
 @interface catzucaIO : NSObject<UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
@@ -41,4 +42,6 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 
 
 @property (readwrite, retain) AVPlayer* mPlayer;
+- (NSArray *)getListOfData: (CLLocation *)newLocation and: (NSString *)category;
+
 @end
