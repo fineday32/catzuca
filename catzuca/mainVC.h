@@ -12,13 +12,16 @@
 #import <CoreMedia/CMTime.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVVideoComposition.h>
+#import <CoreLocation/CoreLocation.h>
 @class AVPlayerDemoPlaybackView;
 @class AVPlayer;
 
 
 
-@interface mainVC : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
+@interface mainVC : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate>{
     AVPlayer* mPlayer;
+    CLLocationManager *locationManager;
+    
  
 }
 

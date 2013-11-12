@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface catzucaIO : NSObject{
     NSArray * originData;
 }
 + (catzucaIO *)sharedData;
 - (NSArray *)readPlist;
+- (NSArray *)getListOfData: (CLLocation *)newLocation and: (NSString *)category;
+
 @end

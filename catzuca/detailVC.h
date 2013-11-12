@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface detailVC : UIViewController <UIActionSheetDelegate>
-@property (strong, nonatomic) NSDictionary *spot;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *detail;
+
+@property (strong, nonatomic) PFObject *spot;
 @end
