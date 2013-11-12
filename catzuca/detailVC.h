@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface detailVC : UIViewController <UIActionSheetDelegate>
+@interface detailVC : UIViewController <UIActionSheetDelegate, UIScrollViewDelegate>
 @property (strong, nonatomic) NSDictionary *spot;
 @end

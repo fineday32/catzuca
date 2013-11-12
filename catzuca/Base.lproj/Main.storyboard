@@ -224,7 +224,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eew-RI-ntn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="2443"/>
+            <point key="canvasLocation" x="1662" y="2431"/>
         </scene>
         <!--Navigation Controller - search-->
         <scene sceneID="0Go-sa-MsU">
@@ -264,7 +264,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="KQN-mL-2ZJ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qjj-rg-NjG" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qjj-rg-NjG" customClass="tabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Iia-zL-iak">

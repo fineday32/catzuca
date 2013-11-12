@@ -7,8 +7,9 @@
 //
 
 #import "detailVC.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface detailVC ()
+@interface detailVC ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
 
@@ -28,5 +29,7 @@
     //UIImage *image = [UIImage imageNamed:self.city[CLDataSourceCityImageKey]];
     //self.imageView.image = image;
 }
+
+
 
 @end
