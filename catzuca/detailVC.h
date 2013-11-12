@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface detailVC : UIViewController <UIActionSheetDelegate>
+@interface detailVC : UIViewController <UIActionSheetDelegate, UIScrollViewDelegate>
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UIImageView *takePhoto;
 @property (weak, nonatomic) IBOutlet UIImageView *makeVideo;

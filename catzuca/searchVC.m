@@ -8,6 +8,7 @@
 
 #import "searchVC.h"
 #import "catzucaIO.h"
+#import "detailVC.h"
 
 @interface searchVC ()
 
@@ -65,13 +66,27 @@
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowSpotDetail"]) {
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *indexPath = [myTableView indexPathForCell:cell];
+        PFObject *spot = [tableData objectAtIndex:indexPath.row];
+        
+        detailVC *detailViewController = segue.destinationViewController; //segue 連線（起點到終點）
+        detailViewController.spot = spot;
+    }
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
     // only show the status bar's cancel button while in edit mode
     sBar.showsCancelButton = YES;
     sBar.autocorrectionType = UITextAutocorrectionTypeNo;
     // flush the previous search content
-    [tableData removeAllObjects];
+    //[tableData removeAllObjects];
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar

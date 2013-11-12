@@ -7,8 +7,9 @@
 //
 
 #import "detailVC.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface detailVC ()
+@interface detailVC ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
 
@@ -121,5 +122,7 @@
 //    self.detail.numberOfLines = 0;
 //    self.detail.text = text;
 }
+
+
 
 @end
