@@ -11,7 +11,8 @@
 
 @interface detailVC : UIViewController <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *detail;
+@property (weak, nonatomic) IBOutlet UIImageView *takePhoto;
+@property (weak, nonatomic) IBOutlet UIImageView *makeVideo;
 
 @property (strong, nonatomic) PFObject *spot;
 @end

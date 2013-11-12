@@ -18,6 +18,12 @@
     [super viewWillAppear:animated];
     
     self.navigationItem.title = self.spot[@"name"];
+    NSString *tmp = [NSString stringWithFormat:@"%@_%@.jpg", self.spot[@"category"], self.spot[@"id"]];
+//    NSData * imageData = [[NSData alloc] initWithContentsOfFile:tmp];
+
+    self.image.image = [UIImage imageNamed:tmp];//[UIImage imageWithData:imageData];
+    self.takePhoto.image = [UIImage imageNamed:@"slr_camera2-50.png"];
+    self.makeVideo.image = [UIImage imageNamed:@"video_camera-50.png"];
     
     
     //Calculate the expected size based on the font and linebreak mode of your label
