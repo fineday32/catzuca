@@ -10,7 +10,8 @@
 
 @interface catzucaAppDelegate : UIResponder <UIApplicationDelegate>{
 }
-
++ (void) Generalstyle;
 @property (strong, nonatomic) UIWindow *window;
+@property UIViewController *viewcontroller;
 
 @end

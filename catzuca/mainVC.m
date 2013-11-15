@@ -120,10 +120,10 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return SPECIAL_HEIGHT;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return SPECIAL_HEIGHT;
+//}
 
 #pragma mark - Navigation
 
