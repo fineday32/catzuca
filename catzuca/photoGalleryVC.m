@@ -215,7 +215,6 @@
     
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
