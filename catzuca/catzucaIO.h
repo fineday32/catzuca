@@ -11,6 +11,7 @@
 #import <CoreMedia/CMTime.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVVideoComposition.h>
+
 @class AVPlayerDemoPlaybackView;
 @class AVPlayer;
 typedef void (^ALAssetsLibraryAssetForURLResultBlock)(ALAsset *asset);
@@ -23,9 +24,13 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     NSInteger cameraImageCount;
     NSInteger allMergeVideoCount;
     NSMutableArray *allMergeVideo;
-    
+    NSInteger videoGalleryVCCount;
     AVPlayer* mPlayer;
+    NSMutableArray* galleryImageName;
+    NSURL* URLForPlayingMergeVideo;
+    BOOL shouldPlayMergeVideo;
 }
+
 + (catzucaIO *)sharedData;
 - (NSArray *)readPlist;
 
@@ -38,10 +43,30 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 - (void)plusAllMergeVideo:(id)object;
 - (NSMutableArray *)getAllMergeVideo;
 
+- (void)setVideoGalleryVCCount;
+- (NSInteger)getVideoGalleryVCCount;
+- (void)plusVideoGalleryVCCount;
+- (void)minusVideoGalleryVCCount;
+
 - (void)mergeAllVideo;
 
+- (void)plusGalleryImageName:(NSString*) sender;
+- (NSMutableArray *)getGalleryImageName;
+
+- (NSURL *)getURLForPlayingMergeVideo;
+
+- (BOOL)getShouldPlayMergeVideo;
+- (void)setShouldPlayMergeVideo:(BOOL)sender;
 
 @property (readwrite, retain) AVPlayer* mPlayer;
 - (NSArray *)getListOfData: (CLLocation *)newLocation and: (NSString *)category;
+
+@property (nonatomic, strong) AVAsset* firstAsset;
+@property (nonatomic, strong) AVAsset* secondAsset;
+@property (nonatomic, strong) AVAsset* thirdAsset;
+@property (nonatomic, strong) AVAsset* fourthAsset;
+@property (nonatomic, strong) AVAsset* fifthAsset;
+@property (nonatomic, strong) AVAsset* sixthAsset;
+@property(nonatomic, strong) AVAsset *audioAsset;
 
 @end

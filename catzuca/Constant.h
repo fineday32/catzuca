@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define SPECIAL_HEIGHT 30
+#define SPECIAL_HEIGHT 40
 
 #define MAX_VEDIO_SELECT_NUM 6
 

@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface videoGalleryVC : UIViewController
+@interface videoGalleryVC : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate>
+// For opening UIImagePickerController
+-(BOOL)startMediaBrowserFromViewController:(UIViewController*)controller usingDelegate:(id )delegate;
 
+@property (strong, nonatomic) IBOutlet UIImageView *mergeVideoSuccess;
+@property (weak, nonatomic) IBOutlet UIButton *playMergeVideoButtonOutlet;
+- (IBAction)playMergeVideoButton:(id)sender;
+
+@property (nonatomic) NSInteger viewCount;
 @end

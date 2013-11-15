@@ -8,11 +8,62 @@
 #import <Parse/Parse.h>
 #import "catzucaAppDelegate.h"
 #import <AudioToolbox/AudioToolbox.h>
+//#define RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 
 @implementation catzucaAppDelegate
++ (void)Generalstyle {
+    //navigationbar
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    [navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bar.png"] forBarMetrics:UIBarMetricsDefault];
+    
+//    UIBarButtonItem *btn = [UIBarButtonItem appearance];
+////    [btn setTintColor:[UIColor whiteColor]];
+////    UIImage *bg = [[UIImage imageNamed:@"search_button.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+//    UIView *view = [btn valueForKey:@"view"];
+////    if (view)
+////        [view frame].size.width = (CGFloat)4.0;
+//    
+//    [btn setBackgroundImage:[[UIImage imageNamed:@"search_button.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    UIButton *button = [[UIButton alloc] init];
+//    NSLog(@"Button Tag is %d", button.tag);
+//    //[button setBackgroundImage:[UIImage imageNamed:@"search_button.png"] forState:UIControlStateNormal];
+//        UIImage *buttonImage = [UIImage imageNamed:@"search_button.png"];
+//        [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+//        button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
+//    UIBarButtonItem *barbutton = [[UIBarButtonItem alloc] initWithCustomView:button];
 
+    
+    
+//    UIBarButtonItem *btn = [UIBarButtonItem appearance];
+//    btn=barbutton;
+    //barbutton.customView = button;
+    
+    
+    // Initialize the UIButton
+//    UIImage *buttonImage = [UIImage imageNamed:@"search_button.png"];
+//    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [aButton setImage:buttonImage forState:UIControlStateNormal];
+//    aButton.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
+//    
+
+    
+    
+//    UITableViewCell *cell = [UITableViewCell appearance];
+//    [cell setBackgroundColor:[UIColor colorWithRed:227.0/255 green:103.0/255 blue:103.0/255 alpha:0.3]];
+    
+//    UITabBar *tab = [UITabBar appearance];
+//    [tab setBackgroundImage:[UIImage imageNamed:@"tab.png"]];
+//    UITableView *tableView = [UITableView appearance];
+//    [tableView setBackgroundColor:[UIColor colorWithRed:227.0/255 green:103.0/255 blue:103.0/255 alpha:0.1]];
+//    UITableViewCell *cell = [UITableViewCell appearance];
+//    cell.backgroundView = [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"cell.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ];
+    
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[self class] Generalstyle];
+
     // Override point for customization after application launch.
 //    [Parse setApplicationId:@"2OMcaBiI4kFBj9pSjQrYb2TGQW8vFOC1VKv41JK3"
 //                  clientKey:@"AETkYSf5jkSF3xo816qi4HgSyEWtIpOyTB6EnnO1"];
