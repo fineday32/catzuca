@@ -25,7 +25,7 @@
  
 }
 
-- (IBAction)showLeftMenu;
+
 
 //@property (weak, nonatomic) IBOutlet UIImageView *upperBarImage;
 //@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
