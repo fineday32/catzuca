@@ -136,7 +136,7 @@
     {
         _maximumNumberOfSelection   = NSIntegerMax;
         _assetsFilter               = [ALAssetsFilter allAssets];
-        _showsCancelButton          = YES;
+        _showsCancelButton          = NO;
         
         if ([self respondsToSelector:@selector(setContentSizeForViewInPopover:)])
             [self setContentSizeForViewInPopover:kPopoverContentSize];
@@ -688,6 +688,7 @@
 
 - (void)finishPickingAssets:(id)sender
 {
+    
     NSMutableArray *assets = [[NSMutableArray alloc] init];
     
     for (NSIndexPath *indexPath in self.collectionView.indexPathsForSelectedItems)

@@ -51,6 +51,8 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 {
     [super viewDidLoad];
     
+    [[catzucaIO sharedData] setVideoGalleryVCCount];
+    
 //    menuButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 //    menuButton.frame = CGRectMake(230, 10, 100, 50);
 //    [menuButton setTitle:@"MENU" forState:UIControlStateNormal];
@@ -77,14 +79,6 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)showLeftMenu
-{
-    NSLog(@"- (IBAction)showLeftMenu;");
-//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yourimage.png"]];
-//    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yourimage2.jpg"]]];
-//    self.navigationItem.rightBarButtonItem = item;
 }
 
 

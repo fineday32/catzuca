@@ -16,14 +16,14 @@
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     [navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bar.png"] forBarMetrics:UIBarMetricsDefault];
     
-    UIBarButtonItem *btn = [UIBarButtonItem appearance];
-//    [btn setTintColor:[UIColor whiteColor]];
-//    UIImage *bg = [[UIImage imageNamed:@"search_button.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    UIView *view = [btn valueForKey:@"view"];
-//    if (view)
-//        [view frame].size.width = (CGFloat)4.0;
-    
-    [btn setBackgroundImage:[[UIImage imageNamed:@"search_button.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    UIBarButtonItem *btn = [UIBarButtonItem appearance];
+////    [btn setTintColor:[UIColor whiteColor]];
+////    UIImage *bg = [[UIImage imageNamed:@"search_button.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+//    UIView *view = [btn valueForKey:@"view"];
+////    if (view)
+////        [view frame].size.width = (CGFloat)4.0;
+//    
+//    [btn setBackgroundImage:[[UIImage imageNamed:@"search_button.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 //    UIButton *button = [[UIButton alloc] init];
 //    NSLog(@"Button Tag is %d", button.tag);
 //    //[button setBackgroundImage:[UIImage imageNamed:@"search_button.png"] forState:UIControlStateNormal];
