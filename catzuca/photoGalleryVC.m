@@ -177,19 +177,23 @@
     //                                      }
     //                                  }];
     
-    FBShareDialogParams *params = [[FBShareDialogParams alloc] init];
-    params.link = [NSURL URLWithString:@"https://developers.facebook.com/ios"];
-    params.picture = [NSURL URLWithString:@"image1.jpg"];
-    params.name = @"跟著步落客咔ㄘ咔";
-    params.caption = @"Build great apps";
-    [FBDialogs presentShareDialogWithParams:params clientState:nil handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
-        if(error) {
-            NSLog(@"Error: %@", error.description);
-        } else {
-            NSLog(@"Success!");
-        }
-    }];
+    NSIndexPath *indexPath =
+    [self.tableView
+     indexPathForCell:(UITableViewCell *)[[sender superview] superview]];
+    NSUInteger row = indexPath.row;
+    NSLog(@"=================%lu", (unsigned long)row);
     
+
+    NSString *shareString = @"test";
+    NSData *tempimage =[[NSData alloc] initWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent:_directoryContents[row]]];
+    UIImage *shareImage = [UIImage imageWithData:tempimage];
+
+    NSArray *activityItems = [NSArray arrayWithObjects:shareString, shareImage, nil, nil];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
 - (BOOL)shareGameActivity {
