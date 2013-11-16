@@ -15,9 +15,15 @@
     //navigationbar
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     [navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bar.png"] forBarMetrics:UIBarMetricsDefault];
+    [navigationBar setTintColor:[UIColor whiteColor]];
+    [navigationBar setBarStyle:UIBarStyleBlackTranslucent];
+//    [navigationBar setTranslucent:NO];
     
-//    UIBarButtonItem *btn = [UIBarButtonItem appearance];
-////    [btn setTintColor:[UIColor whiteColor]];
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    [attributes setValue:[UIColor whiteColor] forKey:UITextAttributeTextColor];
+
+    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
 ////    UIImage *bg = [[UIImage imageNamed:@"search_button.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
 //    UIView *view = [btn valueForKey:@"view"];
 ////    if (view)

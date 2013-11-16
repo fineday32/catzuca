@@ -33,7 +33,7 @@
     self.category = [[NSMutableDictionary alloc] init];
     [self.category setObject:@"民宿" forKey:@"houstay"] ;
     [self.category setObject:@"博物館" forKey:@"museum"] ;
-    [self.category setObject:@"文化景點" forKey:@"culture"] ;
+    [self.category setObject:@"文化景點" forKey:@"culture"] ; //no data
     [self.category setObject:@"溫泉" forKey:@"hot spring"] ;
     [self.category setObject:@"餐廳" forKey:@"restaurant"] ;
     [self.category setObject:@"工作坊" forKey:@"workshop"] ;
@@ -74,7 +74,17 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [[self.category allValues] objectAtIndex:indexPath.row];
+    UILabel *spotName = (UILabel *)[cell viewWithTag:1001];
+    spotName.text = [[self.category allValues] objectAtIndex:indexPath.row];
+    UIImageView *spotImage = (UIImageView *)[cell viewWithTag:1002];
+    
+    NSURL *imgPath = [[NSBundle mainBundle] URLForResource:[[self.category allKeys] objectAtIndex:indexPath.row] withExtension:@"png"];
+    
+    NSString *stringPath = [imgPath absoluteString];
+    NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:stringPath]];
+    
+    spotImage.image = [UIImage imageWithData: imageData];
+//    cell.textLabel.text = [[self.category allValues] objectAtIndex:indexPath.row];
     // Configure the cell...
     
     return cell;

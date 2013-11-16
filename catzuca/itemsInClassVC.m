@@ -54,7 +54,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"%d", self.datum.count);
     return self.datum.count;
 }
 
@@ -64,8 +63,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    NSLog(@"%@", [[self.datum objectAtIndex:indexPath.row] objectForKey:@"name"]);
-    cell.textLabel.text = [[self.datum objectAtIndex:indexPath.row] objectForKey:@"name"];
+    UILabel *spotName = (UILabel *)[cell viewWithTag:1001];
+    spotName.text = [[self.datum objectAtIndex:indexPath.row] objectForKey:@"name"];
+    UIImageView *spotImage = (UIImageView *)[cell viewWithTag:1002];
+    
+    NSURL *imgPath = [[NSBundle mainBundle] URLForResource:[[self.datum objectAtIndex:indexPath.row] objectForKey:@"category"] withExtension:@"png"];
+    
+    NSString *stringPath = [imgPath absoluteString];
+    NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:stringPath]];
+    
+    spotImage.image = [UIImage imageWithData: imageData];
+    
+//    cell.textLabel.text = [[self.datum objectAtIndex:indexPath.row] objectForKey:@"name"];
     return cell;
 }
 
