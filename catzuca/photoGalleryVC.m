@@ -207,7 +207,8 @@
      indexPathForCell:(UITableViewCell *)[[sender superview] superview]];
     NSUInteger row = indexPath.row;
     
-    NSString *shareString = @"test";
+    NSString *shareString = [NSString stringWithFormat:@"我最喜歡 %@ 了 <3", [self.allImageName objectAtIndex:indexPath.row]];
+    
     NSData *tempimage =[[NSData alloc] initWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent:_directoryContents[row]]];
     UIImage *shareImage = [UIImage imageWithData:tempimage];
     NSArray *activityItems = [NSArray arrayWithObjects:shareString, shareImage, nil, nil];

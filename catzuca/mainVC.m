@@ -109,9 +109,16 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 //    NSLog(@"row:%@",[self->data objectAtIndex:indexPath.row]);
+    UILabel *spotName = (UILabel *)[cell viewWithTag:1001];
+    spotName.text = [self->data[indexPath.row] objectForKey:@"name"];
+    UIImageView *spotImage = (UIImageView *)[cell viewWithTag:1002];
+
+    NSURL *imgPath = [[NSBundle mainBundle] URLForResource:[self->data[indexPath.row]objectForKey:@"category"] withExtension:@"png"];
     
-    cell.textLabel.text = [self->data[indexPath.row] objectForKey:@"name"];
-//    cell.textLabel.text = [@([[self->data[indexPath.row] objectForKey:@"GeoPoint"] distanceInMilesTo:locationManager.location]) stringValue];
+    NSString *stringPath = [imgPath absoluteString];
+    NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:stringPath]];
+    
+    spotImage.image = [UIImage imageWithData: imageData];
     
     return cell;
 }

@@ -62,7 +62,17 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] init];
     }
-    cell.textLabel.text = [[tableData objectAtIndex:indexPath.row] objectForKey:@"name"];
+    UILabel *spotName = (UILabel *)[cell viewWithTag:1001];
+    spotName.text = [[tableData objectAtIndex:indexPath.row] objectForKey:@"name"];
+    UIImageView *spotImage = (UIImageView *)[cell viewWithTag:1002];
+    
+    NSURL *imgPath = [[NSBundle mainBundle] URLForResource:[[tableData objectAtIndex:indexPath.row] objectForKey:@"category"] withExtension:@"png"];
+    
+    NSString *stringPath = [imgPath absoluteString];
+    NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:stringPath]];
+    
+    spotImage.image = [UIImage imageWithData: imageData];
+//    cell.textLabel.text = [[tableData objectAtIndex:indexPath.row] objectForKey:@"name"];
     return cell;
 }
 

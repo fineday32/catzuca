@@ -27,7 +27,7 @@
     
     
     
-    self.navigationItem.title = self.spot[@"name"];
+//    self.mytitle.text = self.spot[@"name"];
     NSString *tmp = [NSString stringWithFormat:@"%@_%@.jpg", self.spot[@"category"], self.spot[@"id"]];
 
     self.image.image = [UIImage imageNamed:tmp];

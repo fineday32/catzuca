@@ -12,6 +12,7 @@
 @interface detailVC : UIViewController <UIActionSheetDelegate, UIScrollViewDelegate>
 
 
+//@property (weak, nonatomic) IBOutlet UILabel *mytitle;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UIImageView *takePhoto;
 @property (weak, nonatomic) IBOutlet UIImageView *makeVideo;
