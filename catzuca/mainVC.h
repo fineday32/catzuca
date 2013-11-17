@@ -24,7 +24,7 @@
     
  
 }
-
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation;
 //@property (weak, nonatomic) IBOutlet UIImageView *upperBarImage;
 //@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 

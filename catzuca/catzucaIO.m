@@ -182,6 +182,8 @@ static catzucaIO *catzuca = nil;
         sixthAsset = [AVAsset assetWithURL:url6];
     }
 
+    /*-----Catzuca ending video merge-----*/
+    AVURLAsset* lastAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"catzuca ending" ofType: @"MOV"]] options:nil];
     
     
 //    AVURLAsset* firstAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"IMG_1442" ofType: @"MOV"]] options:nil];
@@ -274,8 +276,19 @@ static catzucaIO *catzuca = nil;
                   (float) totalTime.value / totalTime.timescale);
 
         }
-        
-        
+    
+        /*-----Catzuca last asset-----*/
+    [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, lastAsset.duration)
+                        ofTrack:[[lastAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:totalTime error:nil];
+    //            CMTime temp = totalTime;
+    //            totalTime = CMTimeAdd(temp, sixthAsset.duration);
+    totalTime = CMTimeAdd(totalTime, lastAsset.duration);
+    
+    NSLog(@"testTime 6 w/ input 0, 30: value: %lld, timescale %d, seconds: %f",
+          totalTime.value, totalTime.timescale,
+          (float) totalTime.value / totalTime.timescale);
+        /*----------------------------*/
+    
         // 3 - Audio track
         if (audioAsset!=nil){
             AVMutableCompositionTrack *AudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio
