@@ -20,7 +20,7 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 #import "catzucaAppDelegate.h"
 
 @implementation catzucaIO
-@synthesize firstAsset, secondAsset, thirdAsset, fourthAsset, fifthAsset, sixthAsset;
+@synthesize firstAsset, secondAsset, thirdAsset, fourthAsset, fifthAsset, sixthAsset, lastAsset;
 @synthesize audioAsset;
 static catzucaIO *catzuca = nil;
 
@@ -183,7 +183,7 @@ static catzucaIO *catzuca = nil;
     }
 
     /*-----Catzuca ending video merge-----*/
-    AVURLAsset* lastAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"catzuca ending" ofType: @"MOV"]] options:nil];
+    AVURLAsset* lastAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"catzuca ending" ofType: @"mov"]] options:nil];
     
     
 //    AVURLAsset* firstAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"IMG_1442" ofType: @"MOV"]] options:nil];
@@ -276,7 +276,7 @@ static catzucaIO *catzuca = nil;
                   (float) totalTime.value / totalTime.timescale);
 
         }
-    
+
         /*-----Catzuca last asset-----*/
     [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, lastAsset.duration)
                         ofTrack:[[lastAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:totalTime error:nil];
@@ -288,6 +288,7 @@ static catzucaIO *catzuca = nil;
           totalTime.value, totalTime.timescale,
           (float) totalTime.value / totalTime.timescale);
         /*----------------------------*/
+
     
         // 3 - Audio track
         if (audioAsset!=nil){
@@ -371,6 +372,7 @@ static catzucaIO *catzuca = nil;
     if ([category isEqualToString:@"all"]) {
         // User's location
         PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
+        NSLog(@"%f %f",newLocation.coordinate.latitude, newLocation.coordinate.longitude);
         // Interested in locations near user.
         [query whereKey:@"GeoPoint" nearGeoPoint:userGeoPoint];
         // Limit what could be a lot of points.

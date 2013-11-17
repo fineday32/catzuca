@@ -67,6 +67,7 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 @property (nonatomic, strong) AVAsset* fourthAsset;
 @property (nonatomic, strong) AVAsset* fifthAsset;
 @property (nonatomic, strong) AVAsset* sixthAsset;
+@property (nonatomic, strong) AVAsset* lastAsset;
 @property(nonatomic, strong) AVAsset *audioAsset;
 
 @end
