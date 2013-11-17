@@ -27,12 +27,12 @@
     
     
     
-    self.mytitle.text = self.spot[@"name"];
+//    self.mytitle.text = self.spot[@"name"];
     NSString *tmp = [NSString stringWithFormat:@"%@_%@.jpg", self.spot[@"category"], self.spot[@"id"]];
 
     self.image.image = [UIImage imageNamed:tmp];
-    self.takePhoto.image = [UIImage imageNamed:@"slr_camera2-50.png"];
-    self.makeVideo.image = [UIImage imageNamed:@"video_camera-50.png"];
+//    self.takePhoto.image = [UIImage imageNamed:@"slr_camera2-50.png"]  ;
+//    self.makeVideo.image = [UIImage imageNamed:@"video_camera-50.png"];
     
     
     //Calculate the expected size based on the font and linebreak mode of your label
@@ -51,28 +51,38 @@
     CGRect screenRect = [[UIScreen mainScreen] applicationFrame];
     CGFloat screenHeight = screenRect.size.height;
     
-    NSArray *seq = [NSArray arrayWithObjects:@"name", @"ethnic", @"address", @"telephone", @"type", @"notablework", @"award", @"history", nil];
+    NSArray *seq = [NSArray arrayWithObjects:@"name", @"ethnic", @"address", @"telephone", @"OpeningHours", @"AdmissionFee", @"type", @"TheExhibition", @"Description", @"Summary", @"BusinessProject", @"PresentStatus", @"SpringNature", @"notablework", @"award", @"history", nil];
     NSDictionary *chiname = [[NSDictionary alloc] initWithObjectsAndKeys:@"名稱", @"name",
                                                                          @"地址", @"address",
                                                                          @"電話", @"telephone",
                                                                          @"作品", @"notablework",
                                                                          @"族群", @"ethnic",
                                                                          @"成就", @"award",
-                                                                         @"表演類型", @"type",
+                                                                         @"類型", @"type",
                                                                          @"歷史", @"history",
+                                                                         @"時間", @"OpeningHours",
+                                                                         @"費用", @"AdmissionFee",
+                                                                         @"簡介", @"TheExhibition",
+                                                                         @"簡介", @"Description",
+                                                                         @"簡介", @"Summary",
+                                                                         @"泉水", @"SpringNature",
+                                                                         @"近況", @"PresentStatus",
+                                                                         @"簡介", @"BusinessProject",
                              nil];
     
-    int y = 300;
+    int y = 290;
     for( NSString *key in seq ){
         if (self.spot[key] != nil && ![[self.spot[key] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]){
             
-            UILabel *label1 =  [[UILabel alloc] initWithFrame: CGRectMake(20, y, 70, 30)];
+            UILabel *label1 =  [[UILabel alloc] initWithFrame: CGRectMake(24, y, 66, 30)];
             label1.text = chiname[key];
+            label1.textColor = [UIColor colorWithRed:0.6 green:0 blue:0 alpha:0.8];
+            label1.font = [UIFont boldSystemFontOfSize:17];
             
 
 
             
-            UILabel *label2 =  [[UILabel alloc] initWithFrame: CGRectMake(75, y+5, 225, 30)];
+            UILabel *label2 =  [[UILabel alloc] initWithFrame: CGRectMake(73, y+5, 224, 30)];
             label2.attributedText = self.spot[key];
             label2.text = self.spot[key];
             
@@ -88,7 +98,7 @@
             [self.view addSubview:label1];
             [self.view addSubview:label2];
             
-            y += label2.frame.size.height;
+            y += label2.frame.size.height+8;
             if (y > screenHeight) {
                 break;
             }

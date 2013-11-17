@@ -361,7 +361,7 @@ static catzucaIO *catzuca = nil;
         // Interested in locations near user.
         [query whereKey:@"GeoPoint" nearGeoPoint:userGeoPoint];
         // Limit what could be a lot of points.
-        query.limit = 20;
+        query.limit = 50;
         // Final list of objects
 //        NSArray *test = [query findObjects];
 //        NSLog(test[0][@"address"]);
