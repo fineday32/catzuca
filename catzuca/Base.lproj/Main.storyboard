@@ -444,7 +444,7 @@
         <scene sceneID="I5P-1m-YZQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2yr-Ir-9MJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="來嘛" image="shoes-32.png" id="7if-xX-lvq"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="來嘛" image="baby_feet-32.png" id="7if-xX-lvq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BUV-Da-OpU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -489,9 +489,9 @@
     <resources>
         <image name="1201" width="32" height="32"/>
         <image name="archive-32.png" width="32" height="32"/>
+        <image name="baby_feet-32.png" width="32" height="32"/>
         <image name="movie-32.png" width="32" height="32"/>
         <image name="search-32.png" width="32" height="32"/>
-        <image name="shoes-32.png" width="32" height="32"/>
         <image name="stack_of_photos-32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
