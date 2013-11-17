@@ -10,6 +10,7 @@
 
 @interface photoGalleryShowImage : UIViewController
 
+@property (weak) UIImage *image;
 @property (strong, nonatomic) NSData *imageData;
 @property (strong, nonatomic) IBOutlet UIImageView *showImage;
 

@@ -19,7 +19,8 @@
     self.navigationItem.hidesBackButton = NO;
     
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-    [self.showImage setImage:[UIImage imageWithData:self.imageData]];
+//    [self.showImage setImage:[UIImage imageWithData:self.imageData]];
+    [self.showImage setImage:self.image];
 //    });
         
     

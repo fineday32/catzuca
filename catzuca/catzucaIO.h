@@ -42,6 +42,7 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 
 - (void)plusAllMergeVideo:(id)object;
 - (NSMutableArray *)getAllMergeVideo;
+- (void)cleanAllMergeVideo;
 
 - (void)setVideoGalleryVCCount;
 - (NSInteger)getVideoGalleryVCCount;
@@ -60,6 +61,8 @@ typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
 
 @property (readwrite, retain) AVPlayer* mPlayer;
 - (NSArray *)getListOfData: (CLLocation *)newLocation and: (NSString *)category;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 @property (nonatomic, strong) AVAsset* firstAsset;
 @property (nonatomic, strong) AVAsset* secondAsset;

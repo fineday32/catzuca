@@ -21,7 +21,7 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 
 @implementation catzucaIO
 @synthesize firstAsset, secondAsset, thirdAsset, fourthAsset, fifthAsset, sixthAsset, lastAsset;
-@synthesize audioAsset;
+@synthesize audioAsset, activityView;
 static catzucaIO *catzuca = nil;
 
 + (catzucaIO *)sharedData
@@ -80,6 +80,10 @@ static catzucaIO *catzuca = nil;
 
 - (NSMutableArray *)getAllMergeVideo{
     return allMergeVideo;
+}
+
+- (void)cleanAllMergeVideo{
+    allMergeVideo = nil;
 }
 
 - (void)setVideoGalleryVCCount{
@@ -237,7 +241,7 @@ static catzucaIO *catzuca = nil;
     
 //    if (firstAsset !=nil && secondAsset!=nil) {
         
-//        [activityView startAnimating];
+        [activityView startAnimating];
         // 1 - Create AVMutableComposition object. This object will hold your AVMutableCompositionTrack instances.
         AVMutableComposition *mixComposition = [[AVMutableComposition alloc] init];
         // 2 - Video track
@@ -393,7 +397,9 @@ static catzucaIO *catzuca = nil;
     fourthAsset = nil;
     fifthAsset = nil;
     sixthAsset = nil;
-//    [activityView stopAnimating];
+    [[catzucaIO sharedData] cleanAllMergeVideo];
+    
+    [activityView stopAnimating];
 }
 
 - (NSArray *)getListOfData: (CLLocation *)newLocation and: (NSString *)category
