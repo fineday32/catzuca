@@ -192,8 +192,42 @@ static catzucaIO *catzuca = nil;
 //    AVURLAsset* firstAsset = [AVURLAsset URLAssetWithURL:allMergeVideo[0].URLs options:nil];
 //    AVURLAsset * secondAsset = [AVURLAsset URLAssetWithURL:allMergeVideo[1].URLs options:nil];
     
-    
-    AVURLAsset* audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"100Point" ofType:@"mp3"]] options:nil];
+    /*----------Audio Alternative Choose----------*/
+
+    switch ([allMergeVideo count]) {
+        case 1:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"10_ab2" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 2:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"20_輕快" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 3:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"30_ab" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 4:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"40_月光" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 5:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"50_歡樂" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 6:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"60_太巴朗" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        default: break;
+    }
+//    AVURLAsset* audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"100Point" ofType:@"mp3"]] options:nil];
     
     
     

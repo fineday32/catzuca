@@ -73,7 +73,7 @@
                                                                          @"簡介", @"BusinessProject",
                              nil];
     
-    int y = 290;
+    int y = 265;
     for( NSString *key in seq ){
         if (self.spot[key] != nil && ![[self.spot[key] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]){
             
