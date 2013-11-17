@@ -20,7 +20,7 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 #import "catzucaAppDelegate.h"
 
 @implementation catzucaIO
-@synthesize firstAsset, secondAsset, thirdAsset, fourthAsset, fifthAsset, sixthAsset;
+@synthesize firstAsset, secondAsset, thirdAsset, fourthAsset, fifthAsset, sixthAsset, lastAsset;
 @synthesize audioAsset;
 static catzucaIO *catzuca = nil;
 
@@ -182,7 +182,9 @@ static catzucaIO *catzuca = nil;
         sixthAsset = [AVAsset assetWithURL:url6];
     }
 
-    
+    id lastVideo7 = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"catzuca ending" ofType: @"MOV"]] options:nil];
+    NSURL* urlLast = [lastVideo7 valueForProperty:ALAssetPropertyAssetURL];
+    lastAsset = [AVAsset assetWithURL:urlLast];
     
 //    AVURLAsset* firstAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"IMG_1442" ofType: @"MOV"]] options:nil];
 //    AVURLAsset * secondAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"IMG_1449" ofType: @"MOV"]] options:nil];
@@ -274,8 +276,13 @@ static catzucaIO *catzuca = nil;
                   (float) totalTime.value / totalTime.timescale);
 
         }
-        
-        
+    
+        /*-----lastVideo merge-----*/
+        [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, lastAsset.duration)
+                        ofTrack:[[lastAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:totalTime error:nil];
+        totalTime = CMTimeAdd(totalTime, lastAsset.duration);
+    
+    
         // 3 - Audio track
         if (audioAsset!=nil){
             AVMutableCompositionTrack *AudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio
@@ -358,6 +365,7 @@ static catzucaIO *catzuca = nil;
     if ([category isEqualToString:@"all"]) {
         // User's location
         PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
+        NSLog(@"%f %f",newLocation.coordinate.latitude, newLocation.coordinate.longitude);
         // Interested in locations near user.
         [query whereKey:@"GeoPoint" nearGeoPoint:userGeoPoint];
         // Limit what could be a lot of points.

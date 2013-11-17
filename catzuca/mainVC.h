@@ -20,7 +20,7 @@
 
 @interface mainVC : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate>{
     AVPlayer* mPlayer;
-    CLLocationManager *locationManager;
+
     
  
 }
@@ -29,8 +29,9 @@
 //@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 
 @property (readwrite, retain) AVPlayer* mPlayer;
+@property (nonatomic, strong) CLLocationManager* locationManager;
 
-
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation;
 
 //@property (weak, nonatomic) IBOutlet UIImageView *upperBarImage;
 //@property (weak, nonatomic) IBOutlet UIImageView *logoImage;

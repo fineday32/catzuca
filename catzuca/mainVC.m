@@ -38,11 +38,11 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        locationManager = [[CLLocationManager alloc] init];
-        locationManager.delegate = self;
-        locationManager.distanceFilter = kCLDistanceFilterNone;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        [locationManager startUpdatingLocation];
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [self.locationManager startUpdatingLocation];
     }
     return self;
 }
@@ -65,8 +65,8 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 //    [_upperBarImage setBackgroundColor:[UIColor cyanColor]];
 //    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:154/255.0f green:189/255.0f blue:212/255.0f alpha:1.0]];
 //    [_logoImage setImage:[UIImage imageNamed:@"logo2.jpg"]];
-    self->data = [[catzucaIO sharedData] getListOfData: locationManager.location and:@"all"];
-    [locationManager stopUpdatingLocation];
+    self->data = [[catzucaIO sharedData] getListOfData: self.locationManager.location and:@"all"];
+    [self.locationManager stopUpdatingLocation];
     
 //    self->data = [[NSArray alloc] init];
 //    self->data = [[catzucaIO sharedData] readPlist];
