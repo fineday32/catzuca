@@ -66,6 +66,7 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 //    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:154/255.0f green:189/255.0f blue:212/255.0f alpha:1.0]];
 //    [_logoImage setImage:[UIImage imageNamed:@"logo2.jpg"]];
     self->data = [[catzucaIO sharedData] getListOfData: locationManager.location and:@"all"];
+    [locationManager stopUpdatingLocation];
     
 //    self->data = [[NSArray alloc] init];
 //    self->data = [[catzucaIO sharedData] readPlist];

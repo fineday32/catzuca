@@ -48,19 +48,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1201" translatesAutoresizingMaskIntoConstraints="NO" id="4qm-Sp-dUV">
-                                <rect key="frame" x="15" y="81" width="258" height="154"/>
+                                <rect key="frame" x="20" y="84" width="280" height="189"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77m-T9-aFa">
-                                <rect key="frame" x="275" y="204" width="38" height="38"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slr_camera2-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="77m-T9-aFa">
+                                <rect key="frame" x="216" y="246" width="42" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zk4-ow-ASV">
-                                <rect key="frame" x="275" y="246" width="38" height="38"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video_camera-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="zk4-ow-ASV">
+                                <rect key="frame" x="258" y="246" width="42" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                             </imageView>
                             <button opaque="NO" tag="32" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZZ-ex-DvH">
-                                <rect key="frame" x="275" y="204" width="38" height="38"/>
+                                <rect key="frame" x="216" y="245" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,8 +74,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScN-Ra-u5I">
-                                <rect key="frame" x="275" y="256" width="38" height="28"/>
+                                <rect key="frame" x="258" y="246" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <size key="titleShadowOffset" width="6" height="0.0"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -120,10 +125,10 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" tag="33" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DER-ue-StS">
-                                            <rect key="frame" x="147" y="43" width="108" height="46"/>
+                                        <button opaque="NO" tag="33" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DER-ue-StS">
+                                            <rect key="frame" x="260" y="67" width="27" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Facebook">
+                                            <state key="normal" image="facebook-50.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
@@ -451,10 +456,13 @@
     </scenes>
     <resources>
         <image name="1201" width="32" height="32"/>
+        <image name="facebook-50.png" width="50" height="50"/>
         <image name="movie-32.png" width="32" height="32"/>
         <image name="search-32.png" width="32" height="32"/>
         <image name="shoes-32.png" width="32" height="32"/>
+        <image name="slr_camera2-50.png" width="50" height="50"/>
         <image name="stack_of_photos-32.png" width="32" height="32"/>
+        <image name="video_camera-50.png" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
