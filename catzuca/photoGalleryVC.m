@@ -13,6 +13,7 @@
 #import "catzucaAppDelegate.h"
 #import "catzucaIO.h"
 #import "photoGalleryShowImage.h"
+#import "noPhotoGallery.h"
 
 @interface photoGalleryVC (){
     int _count;
@@ -75,11 +76,13 @@
     _directoryContents =  [[NSFileManager defaultManager]
                            contentsOfDirectoryAtPath:_documentsDirectory error:&error];
     
+    
     _count = 0;
     _allCellCount=0;
     _wantImageNumber = [[NSMutableArray alloc] init];
     _allImageName = [[catzucaIO sharedData] getGalleryImageName];
     
+    NSLog(@"view will appear");
     for (int i=0; i<[_directoryContents count]; i++)
     {
         NSData *imageData;
@@ -89,7 +92,7 @@
         {
             NSLog(@"12345");
             _allCellCount++;
-            [_wantImageNumber addObject:[NSString stringWithFormat:@"%d", _allCellCount]];
+            [_wantImageNumber addObject:[NSString stringWithFormat:@"%d", i]];
         }
         else
         {
@@ -99,7 +102,13 @@
     }
     NSLog(@"_allCellCount = %d", _allCellCount);
     
-    
+    if (_allCellCount == 0)
+    {
+        NSLog(@"_allCellCount = 0, in push view controller");
+        noPhotoGallery *viewController;
+        viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"noPhotoGallery"];
+        [self.navigationController pushViewController:viewController animated:NO];
+    }
     
     [self.tableView reloadData];
 }
@@ -131,13 +140,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"cellForRowAtIndexPath");
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
     // Configure the cell...
 
-    if (_count > [_directoryContents count]-1)
+    if (_count > [_wantImageNumber count]-1)
     {
         NSLog(@"_count >= [_directoryContents count]-1");
         return cell;
@@ -145,34 +155,36 @@
     
     Title = (UILabel *)[cell viewWithTag:11];
     imageView = (UIImageView *)[cell viewWithTag:22];
-    NSLog(@"hahaha ");
+    
+    NSLog(@"indexPath.row = %d", indexPath.row);
+    NSLog(@"_wantImageNumber = %@, _count = %d", [_wantImageNumber objectAtIndex:_count], _count);
     
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSData* imageData = [NSData dataWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent: [_directoryContents objectAtIndex:[[_wantImageNumber objectAtIndex:_count] intValue]-1]]];
+        NSData* imageData = [NSData dataWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent: [_directoryContents objectAtIndex:[[_wantImageNumber objectAtIndex:_count] intValue]]]];
+    UIImage *image = [UIImage imageWithData:imageData];
 //        dispatch_async(dispatch_get_main_queue(), ^{
-            [imageView setImage:[UIImage imageWithData:imageData]];
-            Title.text = [self.allImageName objectAtIndex:_count];
+            [imageView setImage:image];
+//            Title.text = [self.allImageName objectAtIndex:_count];
+
 //        });
-        _count++;
+
 //    });
+    NSString* name = [NSString stringWithFormat:@"%@", [_directoryContents objectAtIndex:[[_wantImageNumber objectAtIndex:_count] intValue]]];
     
-
-
+    Title.text = [name substringToIndex:[name length]-5];
     
-    //    NSString *path = _directoryContents[indexPath.row];
-    //    [image valueForKeyPath:[_documentsDirectory stringByAppendingPathComponent:_directoryContents[indexPath.row]]];
-    //    [image setValuesForKeysWithDictionary:[_documentsDirectory stringByAppendingPathComponent:_directoryContents[indexPath.row]]];
+    _count++;
     
+    NSLog(@"Title.text %@",Title.text );
     UIButton *button;
     button = (UIButton *)[cell viewWithTag:33];
-//    UIImageView *shareFBImage;
-//    shareFBImage = (UIImageView *)[cell viewWithTag:44];
-//    [shareFBImage setImage:[UIImage imageNamed:@"FBShare1.png"]];
     [button setTitle:@"" forState:UIControlStateNormal];
-    //    [button setTitle:@"分享至臉書" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(shareToFacebook:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
 }
+
+
 
 - (void) shareToFacebook:(UIButton *)sender{
 //    NSLog(@"hihi");

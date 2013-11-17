@@ -14,6 +14,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "UIButton+Bootstrap.h"
+#import "playVideo.h"
 
 @interface videoGalleryVC ()<UINavigationControllerDelegate, CTAssetsPickerControllerDelegate>{
 
@@ -47,9 +48,9 @@
         [alert show];
     }
     else{
-        [self.playMergeVideoButtonOutlet setTitle:@"立即觀看！" forState:UIControlStateNormal];
-        self.playMergeVideoButtonOutlet.enabled = YES;
-        [self.playMergeVideoButtonOutlet infoStyle];
+//        [self.playMergeVideoButtonOutlet setTitle:@"立即觀看！" forState:UIControlStateNormal];
+//        self.playMergeVideoButtonOutlet.enabled = YES;
+//        [self.playMergeVideoButtonOutlet infoStyle];
     }
     //for Image(Video) Pick
     if (self.asset==nil)
@@ -156,6 +157,8 @@
 
 
 - (IBAction)playMergeVideoButton:(id)sender {
+//    playVideo *PlayVideo = [[playVideo alloc] init];
+//    [self.navigationController pushViewController:PlayVideo animated:NO];
     if ([[catzucaIO sharedData] getShouldPlayMergeVideo])
     {
         

@@ -19,6 +19,9 @@
 @implementation detailVC
 
 - (void)viewDidLoad{
+    [self.scrollView setScrollEnabled:YES];
+    [self.scrollView setContentSize:CGSizeMake(320, 465)];
+    [self.scrollView setDelegate:self];
 
 }
 
@@ -95,8 +98,14 @@
             label2.frame = labelFrame;
             
             
-            [self.view addSubview:label1];
-            [self.view addSubview:label2];
+//            [self.view addSubview:label1];
+//            [self.view addSubview:label2];
+
+//            self.textView.text = [self.textView.text stringByAppendingString:[NSString stringWithFormat:@"%@  %@\n\n", label1.text, label2.text]];
+            
+            [self.scrollView addSubview:label1];
+            [self.scrollView addSubview:label2];
+            
             
             y += label2.frame.size.height+8;
             if (y > screenHeight) {
@@ -192,8 +201,8 @@
             NSData *data = UIImagePNGRepresentation(pickedImage);
             
             NSInteger count = [[catzucaIO sharedData] getCameraImageCount];
-            
-            NSString *FileName = [NSString stringWithFormat:@"testImageSave%d.png", count];
+            NSString *FileName = [NSString stringWithFormat:@"%@%d.png",[self.spot objectForKey:@"name"], count];
+//            NSString *FileName = [NSString stringWithFormat:@"testImageSave%d.png", count];
             NSLog(@"save image name =  testImageSave%d", count);
             NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
             NSString *documentsDirectory = [paths objectAtIndex:0];
