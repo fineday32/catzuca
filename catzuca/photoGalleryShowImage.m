@@ -12,6 +12,10 @@
 
 - (void) viewDidLoad{
     NSLog(@"in photoGalleryShowImage");
+    [self.scrollView setScrollEnabled:YES];
+    [self.scrollView setContentSize:CGSizeMake(320, 465)];
+    [self.scrollView setDelegate:self];
+
 }
 - (void) viewWillAppear:(BOOL)animated{
     NSLog(@"here");
