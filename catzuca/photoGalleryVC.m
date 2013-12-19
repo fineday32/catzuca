@@ -17,6 +17,8 @@
 
 @interface photoGalleryVC (){
     int _count;
+    int _lastTimeAllCellCount;
+    int _lastTimeDirectoryContentsCount;
     int _allCellCount;
     UIImageView *imageView;
     UILabel *Title;
@@ -62,11 +64,20 @@
     [self.view addSubview:activityIndicator];
     [self.view bringSubviewToFront:activityIndicator];
     [activityIndicator setHidden:YES];
-
-    
+    _lastTimeAllCellCount = _allCellCount;
+    _lastTimeDirectoryContentsCount = [_directoryContents count];
 }
 
 - (void) viewWillAppear:(BOOL)animated{
+
+    if (_lastTimeAllCellCount == 0)
+    {
+        NSLog(@"_allCellCount = 0, in push view controller");
+        noPhotoGallery *viewController;
+        viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"noPhotoGallery"];
+        [self.navigationController pushViewController:viewController animated:NO];
+    }
+
     // find Document folder item
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     _documentsDirectory = [paths objectAtIndex:0];
@@ -76,41 +87,40 @@
     _directoryContents =  [[NSFileManager defaultManager]
                            contentsOfDirectoryAtPath:_documentsDirectory error:&error];
     
-    
-    _count = 0;
-    _allCellCount=0;
-    _wantImageNumber = [[NSMutableArray alloc] init];
-    _allImageName = [[catzucaIO sharedData] getGalleryImageName];
-    
-    NSLog(@"view will appear");
-    for (int i=0; i<[_directoryContents count]; i++)
+    if (_lastTimeDirectoryContentsCount != [_directoryContents count])
     {
-        NSData *imageData;
-        imageData = [NSData dataWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent :_directoryContents[i]]];
+        _count = 0;
+        _allCellCount=0;
+        _wantImageNumber = [[NSMutableArray alloc] init];
+        _allImageName = [[catzucaIO sharedData] getGalleryImageName];
+        
+        NSLog(@"view will appear");
+        for (int i=0; i<[_directoryContents count]; i++)
+        {
+            NSData *imageData;
+            imageData = [NSData dataWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent :_directoryContents[i]]];
 
-        if ([imageData dataIsValidPNG:imageData])
-        {
-            NSLog(@"12345");
-            _allCellCount++;
-            [_wantImageNumber addObject:[NSString stringWithFormat:@"%d", i]];
-        }
-        else
-        {
+            if ([imageData dataIsValidPNG:imageData])
+            {
+                NSLog(@"12345");
+                _allCellCount++;
+                [_wantImageNumber addObject:[NSString stringWithFormat:@"%d", i]];
+            }
+            else
+            {
+                
+            }
             
         }
+        NSLog(@"_allCellCount = %d", _allCellCount);
         
+        if (_lastTimeAllCellCount < _allCellCount)
+        {
+            _lastTimeAllCellCount = _allCellCount;
+            [self.tableView reloadData];
+        }
+        _lastTimeDirectoryContentsCount = [_directoryContents count];
     }
-    NSLog(@"_allCellCount = %d", _allCellCount);
-    
-    if (_allCellCount == 0)
-    {
-        NSLog(@"_allCellCount = 0, in push view controller");
-        noPhotoGallery *viewController;
-        viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"noPhotoGallery"];
-        [self.navigationController pushViewController:viewController animated:NO];
-    }
-    
-    [self.tableView reloadData];
 }
 
 
@@ -119,6 +129,7 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 #pragma mark - Table view data source
@@ -160,10 +171,17 @@
     NSLog(@"_wantImageNumber = %@, _count = %d", [_wantImageNumber objectAtIndex:_count], _count);
     
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSData* imageData = [NSData dataWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent: [_directoryContents objectAtIndex:[[_wantImageNumber objectAtIndex:_count] intValue]]]];
-    UIImage *image = [UIImage imageWithData:imageData];
+//        NSData* imageData = [NSData dataWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent: [_directoryContents objectAtIndex:[[_wantImageNumber objectAtIndex:_count] intValue]]]];
+
+    UIImage *image = [UIImage imageWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent: [_directoryContents objectAtIndex:[[_wantImageNumber objectAtIndex:_count] intValue]]]];
+    
+//    UIImage *image = [UIImage imageWithData:imageData];
+    UIImage *smallImage = [UIImage imageWithCGImage:image.CGImage scale:0.0000001 orientation:image.imageOrientation];
+    image = nil;
+//    imageData = nil;
 //        dispatch_async(dispatch_get_main_queue(), ^{
-            [imageView setImage:image];
+
+            [imageView setImage:smallImage];
 //            Title.text = [self.allImageName objectAtIndex:_count];
 
 //        });
@@ -219,10 +237,11 @@
      indexPathForCell:(UITableViewCell *)[[sender superview] superview]];
     NSUInteger row = indexPath.row;
     
-    NSString *shareString = [NSString stringWithFormat:@"我最喜歡 %@ 了 <3", [self.allImageName objectAtIndex:indexPath.row]];
-    
+    NSString *shareString = [NSString stringWithFormat:@"我最喜歡 %@ 了 <3", Title.text];
+
     NSData *tempimage =[[NSData alloc] initWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent:_directoryContents[row]]];
     UIImage *shareImage = [UIImage imageWithData:tempimage];
+
     NSArray *activityItems = [NSArray arrayWithObjects:shareString, shareImage, nil, nil];
     
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
@@ -248,17 +267,23 @@
     {
         UITableViewCell *cell = (UITableViewCell *)sender;
         chooseImageView = (UIImageView *)[cell viewWithTag:22];
-
+        
+//        NSData *data = UIImagePNGRepresentation(chooseImageView.image);
+        
 //        [activityIndicator setHidden:NO];
 //        [self.view bringSubviewToFront:activityIndicator];
 //        [activityIndicator startAnimating];
-        
-        NSData *data = UIImagePNGRepresentation(chooseImageView.image);
-        
 //       [activityIndicator stopAnimating];
+
+        
+        
+
         
         photoGalleryShowImage *viewController = segue.destinationViewController;
-        viewController.imageData = data;
+//        viewController.imageData = data;
+        viewController.image = chooseImageView.image;
+        
+        /*-----use NSData then use imageNamed: to store in UIImage is poor for leading memory crash when we have many photo-----*/
     }
 }
 

@@ -7,6 +7,8 @@
 //
 
 #import "mapVC.h"
+#import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
 
 @interface mapVC ()
 
@@ -22,6 +24,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    CLLocation *newLocation = self.mapView.userLocation.location;
+//    [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
+//    PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
+//    NSLog(@"%f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+    CLLocationCoordinate2D defaultCoordinate;
+    defaultCoordinate.latitude = 47.517201;
+    defaultCoordinate.longitude = -120.366211;
+    [_mapView setRegion:MKCoordinateRegionMake(defaultCoordinate, MKCoordinateSpanMake(6.8, 6.8)) animated:NO];
+    CLLocationCoordinate2D center = defaultCoordinate;
+    center.latitude -= self.mapView.region.span.latitudeDelta * 0.40;
+    [self.mapView setCenterCoordinate:center animated:YES];
 	// Do any additional setup after loading the view.
 }
 
@@ -44,7 +57,7 @@
         annotationView.canShowCallout = YES;
         annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 //        annotationView.rightCalloutAccessoryView.tag = AnnotationViewRightCalloutTag;
-//        annotationView.image = [UIImage imageNamed:@"pin-50.png"];
+        annotationView.image = [UIImage imageNamed:@"map_marker-50.png"];
     } else {
         annotationView.annotation = annotation;
     }

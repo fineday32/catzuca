@@ -20,8 +20,8 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 #import "catzucaAppDelegate.h"
 
 @implementation catzucaIO
-@synthesize firstAsset, secondAsset, thirdAsset, fourthAsset, fifthAsset, sixthAsset;
-@synthesize audioAsset;
+@synthesize firstAsset, secondAsset, thirdAsset, fourthAsset, fifthAsset, sixthAsset, lastAsset;
+@synthesize audioAsset, activityView;
 static catzucaIO *catzuca = nil;
 
 + (catzucaIO *)sharedData
@@ -80,6 +80,10 @@ static catzucaIO *catzuca = nil;
 
 - (NSMutableArray *)getAllMergeVideo{
     return allMergeVideo;
+}
+
+- (void)cleanAllMergeVideo{
+    allMergeVideo = nil;
 }
 
 - (void)setVideoGalleryVCCount{
@@ -182,6 +186,8 @@ static catzucaIO *catzuca = nil;
         sixthAsset = [AVAsset assetWithURL:url6];
     }
 
+    /*-----Catzuca ending video merge-----*/
+    AVURLAsset* lastAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"catzuca ending" ofType: @"mov"]] options:nil];
     
     
 //    AVURLAsset* firstAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: @"IMG_1442" ofType: @"MOV"]] options:nil];
@@ -190,8 +196,42 @@ static catzucaIO *catzuca = nil;
 //    AVURLAsset* firstAsset = [AVURLAsset URLAssetWithURL:allMergeVideo[0].URLs options:nil];
 //    AVURLAsset * secondAsset = [AVURLAsset URLAssetWithURL:allMergeVideo[1].URLs options:nil];
     
-    
-    AVURLAsset* audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"100Point" ofType:@"mp3"]] options:nil];
+    /*----------Audio Alternative Choose----------*/
+
+    switch ([allMergeVideo count]) {
+        case 1:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"10_ab2" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 2:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"20_輕快" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 3:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"30_ab" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 4:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"40_月光" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 5:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"50_歡樂" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        case 6:
+        {
+            audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"60_太巴朗" ofType:@"mp3"]] options:nil];
+            break;
+        }
+        default: break;
+    }
+//    AVURLAsset* audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"100Point" ofType:@"mp3"]] options:nil];
     
     
     
@@ -201,7 +241,7 @@ static catzucaIO *catzuca = nil;
     
 //    if (firstAsset !=nil && secondAsset!=nil) {
         
-//        [activityView startAnimating];
+        [activityView startAnimating];
         // 1 - Create AVMutableComposition object. This object will hold your AVMutableCompositionTrack instances.
         AVMutableComposition *mixComposition = [[AVMutableComposition alloc] init];
         // 2 - Video track
@@ -274,8 +314,20 @@ static catzucaIO *catzuca = nil;
                   (float) totalTime.value / totalTime.timescale);
 
         }
-        
-        
+
+        /*-----Catzuca last asset-----*/
+    [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, lastAsset.duration)
+                        ofTrack:[[lastAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:totalTime error:nil];
+    //            CMTime temp = totalTime;
+    //            totalTime = CMTimeAdd(temp, sixthAsset.duration);
+    totalTime = CMTimeAdd(totalTime, lastAsset.duration);
+    
+    NSLog(@"testTime 6 w/ input 0, 30: value: %lld, timescale %d, seconds: %f",
+          totalTime.value, totalTime.timescale,
+          (float) totalTime.value / totalTime.timescale);
+        /*----------------------------*/
+
+    
         // 3 - Audio track
         if (audioAsset!=nil){
             AVMutableCompositionTrack *AudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio
@@ -345,7 +397,9 @@ static catzucaIO *catzuca = nil;
     fourthAsset = nil;
     fifthAsset = nil;
     sixthAsset = nil;
-//    [activityView stopAnimating];
+    [[catzucaIO sharedData] cleanAllMergeVideo];
+    
+    [activityView stopAnimating];
 }
 
 - (NSArray *)getListOfData: (CLLocation *)newLocation and: (NSString *)category
@@ -358,6 +412,7 @@ static catzucaIO *catzuca = nil;
     if ([category isEqualToString:@"all"]) {
         // User's location
         PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude];
+//        NSLog(@"%f %f",newLocation.coordinate.latitude, newLocation.coordinate.longitude);
         // Interested in locations near user.
         [query whereKey:@"GeoPoint" nearGeoPoint:userGeoPoint];
         // Limit what could be a lot of points.

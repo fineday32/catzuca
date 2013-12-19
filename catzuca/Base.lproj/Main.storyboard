@@ -34,7 +34,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="G9T-j3-ppa" kind="push" identifier="ShowSpotDetail" id="F06-0V-k5f"/>
+                                    <segue destination="G9T-j3-ppa" kind="push" identifier="ShowSpotDetail" id="Yzl-59-6PK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,41 +53,40 @@
             <objects>
                 <viewController storyboardIdentifier="detailVC" id="G9T-j3-ppa" customClass="detailVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qYR-CM-loL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5Bl-eS-Xtp">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="49" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1201" id="4qm-Sp-dUV">
-                                        <rect key="frame" x="20" y="20" width="280" height="189"/>
+                                        <rect key="frame" x="20" y="63" width="280" height="212"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slr_camera2-50.png" id="77m-T9-aFa">
-                                        <rect key="frame" x="216" y="182" width="42" height="28"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slr_camera2-50.png" id="77m-T9-aFa">
+                                        <rect key="frame" x="32" y="22" width="42" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="tintColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video_camera-50.png" id="zk4-ow-ASV">
-                                        <rect key="frame" x="258" y="182" width="42" height="28"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video_camera-50.png" id="zk4-ow-ASV">
+                                        <rect key="frame" x="172" y="22" width="42" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                     </imageView>
                                     <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BZZ-ex-DvH">
-                                        <rect key="frame" x="216" y="181" width="42" height="30"/>
+                                        <rect key="frame" x="32" y="18" width="113" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="openPhotoCamera:" destination="G9T-j3-ppa" eventType="touchUpInside" id="AWk-5g-pek"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ScN-Ra-u5I">
-                                        <rect key="frame" x="258" y="182" width="42" height="30"/>
+                                        <rect key="frame" x="172" y="21" width="112" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <size key="titleShadowOffset" width="6" height="0.0"/>
                                         <state key="normal">
@@ -97,28 +96,26 @@
                                             <action selector="openCamcorder:" destination="G9T-j3-ppa" eventType="touchUpInside" id="w3W-vr-ehP"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_marker-50.png" id="r1b-gS-K5a">
-                                        <rect key="frame" x="174" y="182" width="42" height="27"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拍照留念" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ez9-dX-vvd">
+                                        <rect key="frame" x="72" y="27" width="68" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="swR-Tj-jsW">
-                                        <rect key="frame" x="174" y="180" width="42" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="攝影記錄" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="COT-fk-Obq">
+                                        <rect key="frame" x="214" y="27" width="70" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vaz-Pe-234" kind="push" identifier="ShowMap" id="PgR-XQ-QCl"/>
-                                        </connections>
-                                    </button>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="77e-u1-elO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="image" destination="4qm-Sp-dUV" id="cO5-m4-Fau"/>
                         <outlet property="makeVideo" destination="zk4-ow-ASV" id="LBZ-43-b6G"/>
@@ -135,12 +132,15 @@
             <objects>
                 <viewController id="vaz-Pe-234" customClass="mapVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVw-vn-ger">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="WDJ-5c-urU">
-                                <rect key="frame" x="0.0" y="63" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vaz-Pe-234" id="mNV-lz-wzM"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -179,16 +179,20 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" alpha="0.74999999999999978" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DER-ue-StS">
-                                            <rect key="frame" x="10" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="17" y="6" width="87" height="88"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="facebook-50.png">
+                                            <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
+                                        <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-50.png" id="Fki-m9-0Fl">
+                                            <rect key="frame" x="17" y="64" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ycb-UM-Ji8" kind="push" identifier="photoGalleryShowImage" id="sVi-UA-92J"/>
+                                    <segue destination="G9T-j3-ppa" kind="push" identifier="ShowSpotDetail" id="Ywz-fv-33K"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -207,18 +211,25 @@
             <objects>
                 <viewController id="Ycb-UM-Ji8" customClass="photoGalleryShowImage" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bV9-0c-Gg9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="exc-gs-1QE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Goy-rn-pc1">
+                                <rect key="frame" x="0.0" y="49" width="325" height="519"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="exc-gs-1QE">
+                                        <rect key="frame" x="-1" y="11" width="321" height="428"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="HK8-nF-nGf"/>
                     <connections>
+                        <outlet property="scrollView" destination="Goy-rn-pc1" id="CGC-sc-vNh"/>
                         <outlet property="showImage" destination="exc-gs-1QE" id="IS1-g2-8O1"/>
                     </connections>
                 </viewController>
@@ -387,9 +398,6 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="G9T-j3-ppa" kind="push" identifier="ShowSpotDetail" id="cFN-z4-S7a"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -474,7 +482,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="G9T-j3-ppa" kind="push" identifier="ShowSpotDetail" id="zCc-qQ-Z3V"/>
+                                            <segue destination="G9T-j3-ppa" kind="push" identifier="ShowSpotDetail" id="nDb-AG-pIb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -543,7 +551,6 @@
         <image name="archive-32.png" width="32" height="32"/>
         <image name="baby_feet-32.png" width="32" height="32"/>
         <image name="facebook-50.png" width="50" height="50"/>
-        <image name="map_marker-50.png" width="50" height="50"/>
         <image name="movie-32.png" width="32" height="32"/>
         <image name="search-32.png" width="32" height="32"/>
         <image name="slr_camera2-50.png" width="50" height="50"/>
@@ -556,6 +563,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cFN-z4-S7a"/>
+        <segue reference="Ywz-fv-33K"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,22 +31,19 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
     UIButton *menuButton;
     NSArray *data;
 }
-
+@synthesize locationManager;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        locationManager = [[CLLocationManager alloc] init];
-        locationManager.delegate = self;
-        locationManager.distanceFilter = kCLDistanceFilterNone;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        [locationManager startUpdatingLocation];
     }
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+}
 
 - (void)viewDidLoad
 {
@@ -65,8 +62,16 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 //    [_upperBarImage setBackgroundColor:[UIColor cyanColor]];
 //    [_upperBarImage setBackgroundColor:[UIColor colorWithRed:154/255.0f green:189/255.0f blue:212/255.0f alpha:1.0]];
 //    [_logoImage setImage:[UIImage imageNamed:@"logo2.jpg"]];
+   
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
     self->data = [[catzucaIO sharedData] getListOfData: locationManager.location and:@"all"];
-    [locationManager stopUpdatingLocation];
+//    [locationManager stopUpdatingLocation];
+
     
 //    self->data = [[NSArray alloc] init];
 //    self->data = [[catzucaIO sharedData] readPlist];
@@ -76,6 +81,16 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    
+	// NSString *userLat = [[NSNumber numberWithDouble:newLocation.coordinate.latitude] stringValue];
+	// NSString *userLng = [[NSNumber numberWithDouble:newLocation.coordinate.longitude] stringValue];
+    self->data = [[catzucaIO sharedData] getListOfData: locationManager.location and:@"all"];
+    [locationManager stopUpdatingLocation];
+
+    [self.tableView reloadData];
+    [self.tableView reloadInputViews];
+}
 
 - (void)didReceiveMemoryWarning
 {
