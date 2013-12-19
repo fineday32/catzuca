@@ -110,7 +110,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="1sA-gf-LgK" kind="push" id="MDd-wd-uFt"/>
+                                            <segue destination="vaz-Pe-234" kind="push" identifier="ShowMap" id="PgR-XQ-QCl"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -130,20 +130,26 @@
             </objects>
             <point key="canvasLocation" x="1651" y="336"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Bao-zD-NEM">
+        <!--MapVC-->
+        <scene sceneID="9HP-gg-A0R">
             <objects>
-                <viewController id="1sA-gf-LgK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3yx-kS-rFB">
+                <viewController id="vaz-Pe-234" customClass="mapVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QVw-vn-ger">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="WDJ-5c-urU">
+                                <rect key="frame" x="0.0" y="63" width="320" height="519"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GDw-0i-HNt"/>
+                    <navigationItem key="navigationItem" id="wkw-7X-qR9"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FrM-83-IdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLV-zI-Ea5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2115" y="336"/>
+            <point key="canvasLocation" x="2083" y="336"/>
         </scene>
         <!--Photo GalleryVC-->
         <scene sceneID="E5g-rc-yCW">
