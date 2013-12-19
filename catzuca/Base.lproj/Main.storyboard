@@ -97,6 +97,22 @@
                                             <action selector="openCamcorder:" destination="G9T-j3-ppa" eventType="touchUpInside" id="w3W-vr-ehP"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_marker-50.png" id="r1b-gS-K5a">
+                                        <rect key="frame" x="174" y="182" width="42" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="swR-Tj-jsW">
+                                        <rect key="frame" x="174" y="180" width="42" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="1sA-gf-LgK" kind="push" id="MDd-wd-uFt"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -113,6 +129,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4a-EU-4Sr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1651" y="336"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bao-zD-NEM">
+            <objects>
+                <viewController id="1sA-gf-LgK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3yx-kS-rFB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GDw-0i-HNt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FrM-83-IdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2115" y="336"/>
         </scene>
         <!--Photo GalleryVC-->
         <scene sceneID="E5g-rc-yCW">
@@ -506,6 +537,7 @@
         <image name="archive-32.png" width="32" height="32"/>
         <image name="baby_feet-32.png" width="32" height="32"/>
         <image name="facebook-50.png" width="50" height="50"/>
+        <image name="map_marker-50.png" width="50" height="50"/>
         <image name="movie-32.png" width="32" height="32"/>
         <image name="search-32.png" width="32" height="32"/>
         <image name="slr_camera2-50.png" width="50" height="50"/>
